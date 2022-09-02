@@ -423,9 +423,9 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   }
 
   .abyssos-bosses.button-container {
-    font-size: 1em;
+    font-size: 1em !important;
     position: fixed;
-    top: unset;
+    top: unset !important;
     left: 0;
     bottom: 0;
     border: 0;
