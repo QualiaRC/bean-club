@@ -26,7 +26,7 @@ function Home() {
         <h1>Bean Club</h1>
         <div className="button-container">
           <Link to="/ffxiv">
-            <button>Final Fantasy: XIV</button>
+            <button>Final Fantasy XIV</button>
           </Link>
         </div>
       </div>
