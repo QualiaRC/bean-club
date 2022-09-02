@@ -112,7 +112,7 @@ body {
 }
 .drawer {
   font-size: 1.2rem;
-  position: absolute;
+  position: fixed;
   background: #181818;
   display: flex;
   height: calc(100% - 3.6rem);
@@ -328,7 +328,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 }
 
 .abyssos-bosses.button-container {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,5 +439,12 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   img, iframe {
     max-width: 80vw !important;
     height: auto;
+  }
+}
+
+@media only screen and (max-height: 1000px) {
+  .abyssos-bosses.button-container {
+    font-size: 3vh;
+    top: 80px;
   }
 }
