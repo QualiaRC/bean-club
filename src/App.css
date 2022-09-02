@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
 
-h1, button {
+h1, h2, button {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -111,5 +111,9 @@ h1, button {
 
   #home:before {
     background-size: 250px;
+  }
+
+  .button-container {
+    margin-bottom: 100px;
   }
 }

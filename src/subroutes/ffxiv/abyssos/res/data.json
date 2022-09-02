@@ -1,0 +1,110 @@
+{
+  "p5": {
+    "title": "Proto-Carbuncle",
+    "textGuides": [
+      {
+        "label": "Preliminary Guide",
+        "url": "https://docs.google.com/document/d/1H8ZMJuaE9QJKY1H_U1EmHjYpBRbkkElPgRM6pxCcKNw/edit?usp=drivesdk"
+      }
+    ],
+    "videoGuides": [
+      "https://www.youtube.com/embed/lgvU6wyq_ak",
+      "https://www.youtube.com/embed/S8OnaLdARxA",
+      "https://www.youtube.com/embed/ogH5TAok5CA"
+    ],
+    "povs": [],
+    "diagrams": [
+      {
+        "label": "",
+        "src": "https://media.discordapp.net/attachments/1014143717575245874/1014315597628186655/unknown.png"
+      },
+      {
+        "label": "",
+        "src": "https://media.discordapp.net/attachments/1014143717575245874/1014315655668965396/unknown.png"
+      },
+      {
+        "label": "",
+        "src": "https://cdn.discordapp.com/attachments/992596350585819136/1014369764434509864/unknown.png"
+      }
+    ],
+    "toolboxes": []
+  },
+  "p6": {
+    "title": "Hegemone",
+    "textGuides": [
+      {
+        "label": "Text Guide",
+        "url": "https://docs.google.com/document/d/1FLBXmfEzSJ6-YHzq65IJZbs7Qm9K5Lm4fZJbKNo_ZQo/edit?usp=sharing"
+      }
+    ],
+    "videoGuides": [
+      "https://www.youtube.com/embed/UkB10-lfY0Q",
+      "https://www.youtube.com/embed/LDLfa-2EUWk",
+      "https://www.youtube.com/embed/XTGgl6iDv4Q"
+    ],
+    "povs": ["https://www.youtube.com/embed/p6vqeAn4Vkc"],
+    "diagrams": [
+      {
+        "label": "",
+        "src": "https://media.discordapp.net/attachments/1014143717575245874/1014315597628186655/unknown.png"
+      },
+      {
+        "label": "",
+        "src": "https://media.discordapp.net/attachments/992596350585819136/1014917858498707537/unknown.png"
+      },
+      {
+        "label": "",
+        "src": "https://media.discordapp.net/attachments/1014267492450967633/1014907934372802611/unknown.png"
+      },
+      {
+        "label": "",
+        "src": "https://cdn.discordapp.com/attachments/992596350585819136/1014968700216033331/unknown.png"
+      }
+    ],
+    "toolboxes": [
+      {
+        "title": "First Cachexia (PURPLE WEST, GREEN EAST) (Ignore the text, just focus on the movement)",
+        "url": "https://ff14.toolboxgaming.space/?id=079967478002661&preview=1"
+      },
+      {
+        "title": "Second Cachexia + 4th Polyominoid Sigma + Transmission",
+        "url": "https://ff14.toolboxgaming.space/?id=551961890981661&preview=1"
+      }
+    ]
+  },
+  "p7": {
+    "title": "Agdistis",
+    "textGuides": [],
+    "videoGuides": [
+      "https://www.youtube.com/embed/xI1mfa_sMck",
+      "https://www.youtube.com/embed/DeZ5tTSYLHs"
+    ],
+    "povs": [
+      "https://www.youtube.com/embed/NSqc16gTWs4",
+      "https://www.youtube.com/embed/yBW_HSQWDGs "
+    ],
+    "diagrams": [],
+    "toolboxes": [
+      {
+        "title": "Inviolate Purgatory",
+        "url": "https://ff14.toolboxgaming.space/?id=655968864491661&preview=1"
+      },
+      {
+        "title": "War's Harvest",
+        "url": "https://ff14.toolboxgaming.space/?id=238969435891661&preview=1"
+      },
+      {
+        "title": "Death's Harvest (5-3 dog relative)",
+        "url": "https://ff14.toolboxgaming.space/?id=608968513891661&preview=1"
+      }
+    ]
+  },
+  "p8": {
+    "title": "Hephaistos",
+    "textGuides": [],
+    "videoGuides": [],
+    "povs": [],
+    "diagrams": [],
+    "toolboxes": []
+  }
+}

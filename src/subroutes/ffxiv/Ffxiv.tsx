@@ -2,16 +2,16 @@ import "./Ffxiv.css";
 import { useEffect, useState } from "react";
 import { Routes, Route, Link, Outlet, Navigate, useLocation } from "react-router-dom";
 import Home from "./Home";
-import { stat } from "fs";
+import Abyssos from "./abyssos/Abyssos";
+import Dragonsong from "./dragonsong/Dragonsong";
 
 function Ffxiv() {
-
   return (
     <Routes>
       <Route path="/" element={<Wrapper />}>
         <Route path="" element={<Home />} />
-        <Route path="/abyssos" />
-        <Route path="/dragonsong" />
+        <Route path="/abyssos/*" element={<Abyssos />} />
+        <Route path="/dragonsong/*" element={<Dragonsong />} />
         <Route path="*" element={<Navigate to="/ffxiv" replace />} />
       </Route>
     </Routes>
@@ -21,6 +21,7 @@ function Ffxiv() {
 function Wrapper() {
   const location = useLocation();
   useEffect(() => {
+    document.title = "Bean Club| FFXIV";
     toggleState(false);
   }, [location]);
 
@@ -28,6 +29,19 @@ function Wrapper() {
   const toggleState = (state:boolean) => {
     setMenuOpen(state);
   }
+
+  let [touchstartX, touchendX] = [0, 0];
+  document.addEventListener("touchstart", e => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+  document.addEventListener("touchend", e => {
+    touchendX = e.changedTouches[0].screenX;
+    if(menuOpen) {
+      if(touchstartX - touchendX > 100) return toggleState(false);
+    } else {
+      if(touchendX - touchstartX > 120) return toggleState(true);
+    }
+  });
 
   return (
     <div id="container">
@@ -49,7 +63,7 @@ function Wrapper() {
       </nav>
 
       <div id="main-section">
-        <Outlet ></Outlet>
+        <Outlet />
       </div>
     </div>
   )

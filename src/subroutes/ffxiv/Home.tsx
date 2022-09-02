@@ -1,8 +1,17 @@
-import Bean from "../../res/img/bean.png";
-
 function Home() {
   return (
-    <img id="bean" src={Bean} />
+    <>
+      <header className="home-header">
+          <h1>
+            Final Fantasy: XIV<br />Bean Club
+          </h1>
+      </header>
+
+      <div className="section home-content">
+        <h1>Welcome to Bean Club!</h1>
+        <p>Final Fantasy: XIV resources, guides and more, all in one convenient location.</p>
+      </div>
+    </>
   )
 }
 
