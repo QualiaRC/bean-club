@@ -37,7 +37,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1e1e1e;
+  background: #222;
   background-image: url("../../res/img/bg.png");
   z-index: -9999;
 }
@@ -240,7 +240,6 @@ body {
 .section {
   background: #181818;
   padding: 48px;
-  border-left: 10px solid #4f5d7e;
   z-index: 10;
 }
 
@@ -271,7 +270,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 }
 
 .diagrams img {
-  max-width: 500px;
+  max-width: 66%;
 }
 
 .hyperlink-list button, .toolboxes button {
@@ -309,38 +308,46 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   background-image: url("../../res/img/bg-abyssos.png");
   background-position: center 30%;
   background-size: cover;
-  margin-bottom: -240px;
+  margin-bottom: -50px;
+  position: relative;
 }
+
+.abyssos-bosses {
+  position: absolute;
+  width: fit-content;
+  top: calc(50% - 0.5em);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 1em;
+  padding: 1em;
+  backdrop-filter: blur(10px) saturate(0.5);
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
 
 .page-abyssos {
   display: flex;
-  flex-direction: row;
-  margin: 5em auto;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 70vw;
-  gap: 20em;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  margin: 0 auto;
+  min-width: 800px;
 }
 
 .abyssos-home, .abyssos-guide {
   font-size: 1.5rem;
   flex: 1;
+  width: 100%;
 }
 
-.abyssos-bosses.button-container {
-  font-size: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  align-content: center;
-  width: fit-content;
-  margin: 0;
-  gap: 1em;
-  position: sticky;
-  top: 2em;
-}
 
 .boss-button {
   width: 3em;
@@ -348,7 +355,8 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   background: white;
   background-size: contain;
   filter: saturate(0.2);
-  transition: 0.4s;
+  transition-duration: 0.4s;
+  transition-property: opacity, filter;
   position: relative;
 }
 .boss-button:after {
@@ -362,13 +370,55 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   color: #ccc;
   filter: drop-shadow(0 0 8px black) drop-shadow(0 0 5px black) drop-shadow(0 0 2px black);
   opacity: 0;
-  transition: 0.4s;
+  transition-duration: 0.4s;
+  transition-property: opacity, filter;
 }
 .boss-button:hover:after, .boss-button[data-active]:after {
   opacity: 1;
 }
 .boss-button[data-active] {
   filter: unset;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2em;
+}
+.timeline-container > .timeline {
+  cursor: default;
+}
+.timeline-container > .timeline .timeline-mechanic {
+  font-weight: bold;
+}
+.timeline-container > .mechanic-description {
+  position: sticky;
+  top: 5em;
+  padding: 1em;
+  background: #cccccc11;
+  flex: 1;
+  height: fit-content;
+}
+.timeline-container > .mechanic-description > h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  line-height: 70%;
+}
+.timeline-container > .mechanic-description > h2 > span.mechanic-type {
+  font-size: 1rem;
+  border-left: 1px solid #ccc;
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+}
+.timeline-container > .mechanic-description > p {
+  margin: 0;
+  margin-top: 0.5rem;
+  white-space: pre-line;
+}
+.timeline-container > .mechanic-description > p + p {
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -407,44 +457,40 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   }
 
   /* ABYSSOS */
+  .abyssos-header {
+    height: 150px;
+  }
+  .abyssos-bosses {
+    font-size: 4.5vw;
+    width: calc(100vw - 2em - 2px);
+  }
   .page-abyssos {
-    margin: 80px auto 0;
-    width: calc(100vw - 10px);
-    flex-direction: column;
-    padding-bottom: 5em;
+    font-size: 1rem;
+    width: calc(100vw - 24px);
+    margin: 1.5em auto;
+    min-width: unset;
   }
-  .abyssos-home {
-    font-size: 1em;
-    max-width: 100%;
+  .abyssos-home, .abyssos-guide {
+    font-size: 1rem;
   }
-  .page-abyssos .section {
-    border: 0;
-    width: calc(100% - 24px)
+  .abyssos-guide ul {
+    padding-left: 1em;
   }
-
-  .abyssos-bosses.button-container {
-    font-size: 1em !important;
-    position: fixed;
-    top: unset !important;
-    left: 0;
-    bottom: 0;
-    border: 0;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 0.5em 0;
-    border-top: 2px solid #4f5d7e;
+  .timeline-container {
+    gap: 0;
   }
-
+  .timeline-container > .mechanic-description {
+    flex-basis: 50%;
+    font-size: 0.8rem;
+  }
+  .timeline-container > .mechanic-description > h2 {
+    line-height: 100%;
+  }
+  .timeline-container > .mechanic-description > h2 > span.mechanic-type {
+    font-size: 0.5em;
+  }
   img, iframe {
-    max-width: 80vw !important;
+    max-width: 80%;
     height: auto;
-  }
-}
-
-@media only screen and (max-height: 1000px) {
-  .abyssos-bosses.button-container {
-    font-size: 3vh;
-    top: 80px;
   }
 }

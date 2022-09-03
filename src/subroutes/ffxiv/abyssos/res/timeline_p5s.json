@@ -1,0 +1,215 @@
+{
+  "timeline": [
+    {
+      "name": "Sonic Howl",
+      "type": "Light Raidwide",
+      "description": ["This is a light raidwide."]
+    },
+    {
+      "name": "Ruby Glow #1",
+      "type": "Heavy Raidwide + General Mechanic",
+      "description": [
+        "Heavy hitting raidwide.",
+        "The arena will split into four quadrants. Two topaz stones will AoE two quadrants and two venom pools will grow, leaving one quadrant as a save spot."
+      ],
+      "children": ["Topaz Stones x2 + Venom Pool x2"]
+    },
+    {
+      "name": "Venomous Mass + Toxic Crunch",
+      "type": "Tankbuster + Tankswap + DoT",
+      "description": [
+        "Venomous Mass is a tankbuster that afflicts a poison debuff and physical vulnerability debuff.",
+        "Must be tank swapped as the proceeding Toxic Crunch will kill the main tank otherwise."
+      ]
+    },
+    {
+      "name": "Caustic Pool",
+      "type": "General Mechanic",
+      "description": [
+        "Four pools will appear around the arena.",
+        "Each pool must be soaked with two party members, otherwise an add spawns with a slow cast leading to a massive raidwide.",
+        " If only one player soaks the puddle, they take massive damage. Standing in the puddle inflicts damage over time while inside."
+      ]
+    },
+    {
+      "name": "Ruby Glow #2",
+      "type": "Heavy Raidwide + General Mechanic",
+      "description": [
+        "Heavy hitting raidwide. The arena will be split diagonally into two halves.",
+        "At the same time, the boss will start in the middle and rush to a corner before turning around and rushing the arena, inflicting a physical vulnerability debuff and knocking players back from the center.",
+        "To resolve this mechanic, stand behind the boss, and after the inital dash, walk into the half of the arena that doesn't have the topaz. Either use knockback immunity or stand in the middle of the arena to get knocked back while avoiding the growing poison puddle."
+      ],
+      "children": ["Topaz Stone + Venom Pool", "Double Rush"]
+    },
+    {
+      "name": "Sonic Howl",
+      "type": "Light Raidwide",
+      "description": ["This is a light raidwide."]
+    },
+    {
+      "name": "Ruby Glow #3",
+      "type": "Heavy Raidwide + General Mechanic",
+      "description": [
+        "Heavy hitting raidwide.",
+        "The arena will split into four quadrants.",
+        "Topaz stones will drop in sets of 2 or 3 with a delay between them, leaving safe spots that must be promptly moved to.",
+        "The first set always AoEs 2 diagonal quadrants, with the second set AoEing the opposite of the first set.",
+        "The third set will leave one safe spot, with the last set's safe spot being the one diagonally adjacent to the previous set."
+      ],
+      "children": ["Topaz Stones x2", "Topaz Stones x2", "Topaz Stones x3", "Topaz Stones x3"]
+    },
+    {
+      "name": "Venomous Mass + Toxic Crunch",
+      "type": "Tankbuster + Tankswap + DoT",
+      "description": [
+        "Venomous Mass is a tankbuster that afflicts a poison debuff and physical vulnerability debuff.",
+        "Must be tank swapped as the proceeding Toxic Crunch will kill the main tank otherwise."
+      ]
+    },
+    {
+      "name": "Venom Squall / Venom Surge",
+      "type": "General Mechanic",
+      "description": [
+        "Both variations on the same mechanic.",
+        "Venom Squall starts by targeting each player with an AoE, resolved by clock positions. After that, players must bait AoE puddles, resolved by stacking mid. Lastly, players must group into light parties to soak two separate stack AoEs.",
+        "Venom Surge is Venom Squall but in opposite mechanic order."
+      ]
+    },
+    {
+      "name": "Claw to Tail / Tail to Claw",
+      "type": "General Mechanic",
+      "description": [
+        "Both variations on the same mechanic.",
+        "Claw will have the boss to a half room frontal cleave multiple times and Tail will have the boss to a half room back cleave once.",
+        "This mechanic is resolved by standing behind the boss for Claw and in front of the boss for Tail, with the mechanic name indicating the order of attacks."
+      ]
+    },
+    {
+      "name": "Caustic Bite (Devour)",
+      "type": "General Mechanic",
+      "description": [
+        "The arena will show 8 bite indicators, with a red bite mark appearing at one position randomly. The red mark will move to each bite indicator, showing an order of AoEs to come. The boss will then become untargetable and AoE each bite indicator in order. Getting hit means death.",
+        "This mechanic has two patterns, Zig-Zag and Circle. Each pattern can be resolved by first standing opposite of the initial bite position.",
+        "For Zig-Zag, move counter-clockwise into the first bite position after the 2nd aoe and stay there until the mechanic is over.",
+        "For circle, move into the first AoE immediately after it resolves, then run clockwise after the 4th jump until the mechanic is over."
+      ]
+    },
+    {
+      "name": "Caustic Pool (Devour)",
+      "type": "General Mechanic",
+      "description": [
+        "Same as the first caustic pool, however the boss satiety mechanic requires it to consume an add otherwise it enrages.",
+        "This is usually resolved by doing the mechanic as normal, but with only one tank soaking a puddle while using their invulnerability."
+      ]
+    },
+    {
+      "name": "Sonic Howl",
+      "type": "Light Raidwide",
+      "description": ["This is a light raidwide."]
+    },
+    {
+      "name": "Ruby Glow #4",
+      "type": "Heavy Raidwide + General Mechanic",
+      "description": [
+        "Heavy hitting raidwide.",
+        "The arena will split into two quadrants. One quadrant will have two topaz stones, and the other will have three.",
+        "Both healers will get targeted with a soak AoE, resolved with light parties. Dropping this AoE on a topaz stone turns it into a venom pool.",
+        "This mechanic is resolved by finding the side with two topaz stones, and having each light party soak and drop an AoE on one of the two stones.",
+        "The boss will then run to a corner and cast Raging Claw or Searing Ray. If Raging Claw, stand behind the boss. If Searing Ray, stand in the half of the arena opposite the boss.",
+        "Avoid the growing venom pools."
+      ],
+      "children": ["Topaz Stones (x3/x2)", "Venom Pool x2", "Raging Claw / Searing Ray"]
+    },
+    {
+      "name": "Venomous Mass + Toxic Crunch",
+      "type": "Tankbuster + Tankswap + DoT",
+      "description": [
+        "Venomous Mass is a tankbuster that afflicts a poison debuff and physical vulnerability debuff.",
+        "Must be tank swapped as the proceeding Toxic Crunch will kill the main tank otherwise."
+      ]
+    },
+    {
+      "name": "Ruby Glow #5",
+      "type": "Heavy Raidwide + General Mechanic",
+      "description": [
+        "Heavy hitting raidwide.",
+        "The arena will split into four quadrants. Two topaz stones will spawn in diagonally adjacent quadrants and two venom pools in the remaining quadrants.",
+        "After the topaz stones resolve, the Venom Squall mechanic starts. To resolve this mechanic, divide the group into two parties to take one half of the arena each. Each group should stand on the wall right behind the topaz aoe, then move into that quadrant after it resolves while spreading to avoid overlapping venom squall. After the spread AoEs resolve, stack up in your groups to bait the ground AoEs, then move away while grouped to soak the stack AoE.",
+        "Avoid the venom pools while doing so."
+      ],
+      "children": ["Topaz Stones x2 + Venom Pool x2", "Venom Pool x2"]
+    },
+    {
+      "name": "Caustic Pool",
+      "type": "General Mechanic",
+      "description": ["Same as the first Caustic Pool."]
+    },
+    {
+      "name": "Claw to Tail / Tail to Claw",
+      "type": "General Mechanic",
+      "description": [
+        "Both variations on the same mechanic.",
+        "Claw will have the boss to a half room frontal cleave multiple times and Tail will have the boss to a half room back cleave once.",
+        "This mechanic is resolved by standing behind the boss for Claw and in front of the boss for Tail, with the mechanic name indicating the order of attacks."
+      ]
+    },
+    {
+      "name": "Venomous Mass + Toxic Crunch",
+      "type": "Tankbuster + Tankswap + DoT",
+      "description": [
+        "Venomous Mass is a tankbuster that afflicts a poison debuff and physical vulnerability debuff.",
+        "Must be tank swapped as the proceeding Toxic Crunch will kill the main tank otherwise."
+      ]
+    },
+    {
+      "name": "Sonic Howl",
+      "type": "Light Raidwide",
+      "description": ["This is a light raidwide."]
+    },
+    {
+      "name": "Ruby Glow #6",
+      "type": "Heavy Raidwide + General Mechanic",
+      "description": [
+        "Heavy hitting raidwide.",
+        "The arena will split into four quadrants. Similar to Ruby Glow #4, at least one section will have two topaz stones, so resolve similarly.",
+        "The boss will use Double Rush afterwards, so make sure you avoid the first rush and use knockback immunity or avoid getting knocked back into the venom pools."
+      ],
+      "children": ["Topaz Stones", "Venom Pool x2", "Double Rush"]
+    },
+    {
+      "name": "Venomous Mass + Toxic Crunch",
+      "type": "Tankbuster + Tankswap + DoT",
+      "description": [
+        "Venomous Mass is a tankbuster that afflicts a poison debuff and physical vulnerability debuff.",
+        "Must be tank swapped as the proceeding Toxic Crunch will kill the main tank otherwise."
+      ]
+    },
+    {
+      "name": "Sonic Howl",
+      "type": "Light Raidwide",
+      "description": ["This is a light raidwide."]
+    },
+    {
+      "name": "Venom Squall / Venom Surge",
+      "type": "General Mechanic",
+      "description": [
+        "Both variations on the same mechanic.",
+        "Venom Squall starts by targeting each player with an AoE, resolved by clock positions. After that, players must bait AoE puddles, resolved by stacking mid. Lastly, players must group into light parties to soak two separate stack AoEs.",
+        "Venom Surge is Venom Squall but in opposite mechanic order."
+      ]
+    },
+    {
+      "name": "Venomous Mass + Toxic Crunch",
+      "type": "Tankbuster + Tankswap + DoT",
+      "description": [
+        "Venomous Mass is a tankbuster that afflicts a poison debuff and physical vulnerability debuff.",
+        "Must be tank swapped as the proceeding Toxic Crunch will kill the main tank otherwise."
+      ]
+    },
+    {
+      "name": "Sonic Shatter x5",
+      "type": "Enrage",
+      "description": ["Raidwides with the final hit being the enrage."]
+    }
+  ]
+}

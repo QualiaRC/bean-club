@@ -5,7 +5,7 @@ function Dragonsong() {
     document.title = "Bean Club| FFXIV - Dragonsong's Reprise (Ultimate)";
   }, []);
   return (
-    <div>WIP</div>
+    <div>{Array(500).join("A")}</div>
   )
 }
 

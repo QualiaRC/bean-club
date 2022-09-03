@@ -22,7 +22,7 @@ function Home() {
     <div id="home">
       <div className="container">
 
-        <img className="logo" src={Logo} />
+        <img className="logo" src={Logo} alt="Bean Club" />
         <h1>Bean Club</h1>
         <div className="button-container">
           <Link to="/ffxiv">
