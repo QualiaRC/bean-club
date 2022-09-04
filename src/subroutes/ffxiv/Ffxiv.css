@@ -182,53 +182,43 @@ body {
 }
 
 /* HOME PAGE */
-.home-header {
+.home-header, .home-header > h1 {
+  position: relative;
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+}
+.home-header {
   font-size: 4rem;
   height: 500px;
-  position: relative;
-  background-color: #d1253310;
-}
-
-@keyframes group-photo-cycle {
-  0%,28%,100% { background-image: url("../../res/img/group-p4s.png") }
-  33%,62% { background-image: url("../../res/img/group-p6s.png") }
-  67%,95% { background-image: url("../../res/img/group-map.png") }
-}
-
-.home-header:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  content: '';
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center 60%;
-  filter: saturate(0.5) contrast(0.8);
-  z-index: -1;
-  animation: group-photo-cycle 16s linear infinite;
+  filter: saturate(0.6) contrast(0.8);
+  
 }
-
-
 .home-header > h1 {
   margin: 0;
-  width: 100%;
   height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: calc(50% + 0.09em) 60%;
   background-clip: text;
-  filter: contrast(0.4) brightness(2) opacity(0.7);
+  filter:  contrast(0.6) brightness(2);
   color: transparent;
   font-size: 10vw;
   line-height: 0.8em;
   margin-left: -0.09em;
   user-select: none;
-  animation: group-photo-cycle 16s infinite linear;
+  z-index: 2;
 }
-
+.home-header:after, .abyssos-header:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../../res/img/bg.png");
+  z-index: 1
+}
 #header-text-path text {
   
   transform: translateY(0.8em);
@@ -330,6 +320,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   backdrop-filter: blur(10px) saturate(0.5);
   border: 1px solid #ccc;
   width: 100%;
+  z-index: 2;
 }
 
 

@@ -1,8 +1,31 @@
+import Banner1 from "../../res/img/group-p4s.png";
+import Banner2 from "../../res/img/group-map.png";
+import Banner3 from "../../res/img/group-p6s.png";
+import { useEffect, useState } from "react";
+
 function Home() {
+  const [banner, setBanner] = useState(Banner1);
+  
+  useEffect(() => {
+    const banners = [Banner1, Banner2, Banner3].map((b: string) => {
+      const image = new Image();
+      image.src = b;
+      return image;
+    });
+
+    const interval = setInterval(() => {
+      banners.unshift(banners.pop() || new Image());
+      setBanner(banners[0].src);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <>
-      <header className="home-header">
-          <h1>
+      <header className="home-header" style={{backgroundImage: `url(${banner})`}}>
+          <h1 style={{backgroundImage: `url(${banner})`}}>
             Final Fantasy XIV<br />Bean Club
           </h1>
       </header>
