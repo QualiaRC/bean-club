@@ -11,19 +11,16 @@
       "description": ["Shared tank cleave that applies a bleed."]
     },
     {
-      "name": "Aetheric Polyominoid",
+      "name": "Aetheric Polyominoid #1",
       "type": "General Mechanic",
-      "description": ["Summons + AoEs on two tiles, blowing up all tiles in line with their cardinals."]
-    },
-    {
-      "name": "Unholy Darkness",
-      "type": "Light Party Stack",
-      "description": ["Split into light parties and separate the stacks."]
-    },
-    {
-      "name": "Exocleaver",
-      "type": "Conal AoEs",
-      "description": ["Six evenly spaced cone AoEs go off, then six more in the first set's safe spots. Wait for the first AoEs to resolve before moving into them."]
+      "description": [
+        "Summons + AoEs on two tiles, blowing up all tiles in line with their cardinals.",
+        "Also marks two healers with stack markers, so split into light parties and separate the stacks.",
+        "As the stack resolves, the boss will use Exocleaver, causing six evenly spaced cone AoEs go off, then six more in the first set's safe spots. Wait for the first AoEs to resolve before moving into them."
+      ],
+      "children": [
+        "Unholy Darkness", "Exocleaver"
+      ]
     },
     {
       "name": "Pathogenic Cells",
@@ -65,12 +62,13 @@
       ]
     },
     {
-      "name": "Aetherial Exchange + Polyominoid Sigma + Dark Dome",
+      "name": "Aetherial Exchange + Polyominoid Sigma #1",
       "type": "General Mechanic",
       "description": [
         "Spawns two pairs of X and + ground AoEs that are tethered to each other, indicating a swap. There will be one safe square, at the corner of the X with an angled tether.",
         "Dark Dome is an invisible AoE bait that snapshots when the cast bar finishes. Bait these AoEs in the middle of the arena before walking over to the safe square."
-      ]
+      ],
+      "children": ["Dark Dome"]
     },
     {
       "name": "Aetherial Exchange + Exchange of Agonies + Exocleaver",
@@ -95,12 +93,13 @@
       "description": ["This is a heavy raidwide."]
     },
     {
-      "name": "Aetherial Exchange + Polyominoid Sigma + Unholy Darkness",
+      "name": "Aetherial Exchange + Polyominoid Sigma #2",
       "type": "General Mechanic",
       "description": [
         "Similar to the first Aetherial Exchange + Polyominoid Sigma, but with healer light party stacks. The safe spot will be the square corner-adjacent to the corner where the two tethered AoEs meet.",
         "Both stacks can fit in the same square as long as they're in opposite corners."
-      ]
+      ],
+      "children": ["Unholy Darkness"]
     },
     {
       "name": "Dark Ashes + Choros Ixou",
@@ -111,10 +110,13 @@
       ]
     },
     {
-      "name": "Cachexia + Dual Predation + Ptera Ixou",
+      "name": "Cachexia #1",
       "type": "Major Mechanic",
       "description": [
         "die here"
+      ],
+      "children": [
+        "Dual Predation", "Ptera Ixou"
       ]
     },
     {
@@ -128,11 +130,14 @@
       "description": ["This is a heavy raidwide."]
     },
     {
-      "name": "Aetheric Polyominoid + Dark Sphere + Dark Dome",
+      "name": "Aetheric Polyominoid #2",
       "type": "General Mechanic",
       "description": [
         "Two X AoEs will appear in the middle, leaving a checkerboard-pattern of safe spots. Meanwhile, each player will get a large spread AoE. Players should spread out to assigned locations to avoid overlap.",
         "The boss will also cast Dark Dome, so be prepared to move away to dodge the AoE bait when the cast bar fills."
+      ],
+      "children": [
+        "Dark Sphere", "Dark Dome"
       ]
     },
     {
@@ -143,13 +148,14 @@
       ]
     },
     {
-      "name": "Aetherial Exchange + Polyominoid Sigma + Choros Ixou",
+      "name": "Aetherial Exchange + Polyominoid Sigma #3",
       "type": "General Mechanic",
       "description": [
         "Similar to the first Aetherial Exchange + Polyominoid Sigma, but with the boss using Choros Ixou at the same time as the ground AoEs resolving.",
         "If the tethered floor AoEs are short, the safe spots are the two tiles corner-adjacent to the X. If the tether is long, the safe spots are the two squares adjacent to the corner tethered +.",
         "While there will be two safe spots, one will get cleaved by Choros Ixou. Wait to identify the first cleave before moving to the correct safe spot."
-      ]
+      ],
+      "children": ["Choros Ixou"]
     },
     {
       "name": "Chelic Synergy",
@@ -162,23 +168,28 @@
       "description": ["This is a heavy raidwide."]
     },
     {
-      "name": "Cachexia + Transmission + Aetherial Exchange + Polyominoid Sigma + Ptera Ixou",
+      "name": "Cachexia #2",
       "type": "Major Mechanic",
-      "description": ["Tank LB3 this"]
+      "description": ["Tank LB3 this"],
+      "children": [
+        "Transmission", "Aetherial Exchange + Polyominoid Sigma #4", "Ptera Ixou"
+      ]
     },
     {
-      "name": "Aetheric Polyominoid + Dark Dome",
+      "name": "Aetheric Polyominoid #3",
       "type": "General Mechanic",
       "description": [
         "Four X or + ground AoEs without tethers. Bait center then move to the safe spot."
-      ]
+      ],
+      "children": ["Dark Dome"]
     },
     {
-      "name": "Aetheric Polyominoid + Choros Ixou",
+      "name": "Aetheric Polyominoid #4",
       "type": "General Mechanic",
       "description": [
         "Same floor pattern as the very first Aetheric Polyominoid. Avoid the Choros Ixou cleaves."
-      ]
+      ],
+      "children": ["Choros Ixou"]
     },
     {
       "name": "Synergy",
