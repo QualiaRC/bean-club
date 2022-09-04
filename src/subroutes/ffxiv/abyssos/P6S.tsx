@@ -1,5 +1,6 @@
+import Timeline_P5S from "./res/timeline_p6s.json";
 import YouTube from "./components/Youtube";
-// import Timeline from "./components/Timeline";
+import Timeline from "./components/Timeline";
 
 const Videos = [
   "https://www.youtube.com/embed/d-eNZwVJI8k",
@@ -25,10 +26,10 @@ function P6S() {
       <h2>Party Organization</h2>
       <ul>
         <li>Two light parties (Healer, Tank, DPS, DPS)</li>
-        <li>Four role-based pairings, one per arena row (Ranged DPS, Tank, Melee DPS, Healer)</li>
+        <li>Four pairs of DPS + Tank/Healer</li>
       </ul>
       <h2>Timeline</h2>
-      <p>WIP</p>
+      <Timeline timelineData={Timeline_P5S} />
       <h2>Video Guides</h2>
       <ul className="videos">
         {

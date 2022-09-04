@@ -362,6 +362,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 }
 .timeline-container > .timeline {
   cursor: default;
+  width: 50%;
 }
 .timeline-container > .timeline .timeline-mechanic {
   font-weight: bold;
@@ -378,7 +379,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
   margin: 0;
-  line-height: 70%;
+  line-height: 80%;
 }
 .timeline-container > .mechanic-description > h2 > span.mechanic-type {
   font-size: 1rem;

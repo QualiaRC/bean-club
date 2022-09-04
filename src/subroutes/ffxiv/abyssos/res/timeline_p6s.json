@@ -1,0 +1,202 @@
+{
+  "timeline": [
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Heavy Raidwide",
+      "description": ["This is a heavy raidwide."]
+    },
+    {
+      "name": "Chelic Synergy",
+      "type": "Shared Tank Cleave",
+      "description": ["Shared tank cleave that applies a bleed."]
+    },
+    {
+      "name": "Aetheric Polyominoid",
+      "type": "General Mechanic",
+      "description": ["Summons + AoEs on two tiles, blowing up all tiles in line with their cardinals."]
+    },
+    {
+      "name": "Unholy Darkness",
+      "type": "Light Party Stack",
+      "description": ["Split into light parties and separate the stacks."]
+    },
+    {
+      "name": "Exocleaver",
+      "type": "Conal AoEs",
+      "description": ["Six evenly spaced cone AoEs go off, then six more in the first set's safe spots. Wait for the first AoEs to resolve before moving into them."]
+    },
+    {
+      "name": "Pathogenic Cells",
+      "type": "General Mechanic",
+      "description": [
+        "Players will be marked with numbers 1 through 8, indicating the attack order of the boss. Boss cleaves each party member sequentially while applying a vulnerability debuff.",
+        "Resolve by having 1-4 stand in cardinal markers slightly positioned N/S, with 5-8 standing either E/W. After 1 gets hit, swap with 5, 2 swap with 6, etc."
+      ]
+    },
+    {
+      "name": "Aetherial Exchange + Exchange of Agonies + Choros Ixou",
+      "type": "General Mechanic",
+      "description": [
+        "Players will be marked with a stack marker, donut AoE or a prey marker. All but two players will be tethered in pairs, indicating that they're going to swap their markers with their partner.",
+        "This mechanic is resolved by having prey marker or tethered stack/donut players standing in assigned corners and stack/donut players or tethered prey marker players standing in the middle.",
+        "An easy solution is knowing that All DPS will go either in or out, while Tanks and Healers do the opposite. Calling \"DPS in\" or \"DPS out\" trivializes the mechanic.",
+        "While this happens, the boss will cast Choros Ixou, where she faces her arms North/South or East/West, cleaving those directions of the arena before cleaving the opposite."
+      ]
+    },
+    {
+      "name": "Synergy",
+      "type": "Dual Tankbuster + Tank Swap",
+      "description": [
+        "Large AoE tankbuster on both tanks that also inflicts bleed.",
+        "Also inflicts a vulnerability debuff on the main tank, requiring a tank swap."
+      ]
+    },
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Heavy Raidwide",
+      "description": ["This is a heavy raidwide."]
+    },
+    {
+      "name": "Transmission + Choros Ixou",
+      "type": "General Mechanic",
+      "description": [
+        "Players will receive either a Chelomorph (wing) or Glassomorph (snake) debuff. On expiry, players get stunned, and Chelomorph players cleave behind them while Glassomorph players cleave in front.",
+        "The boss will also be casting Choros Ixou, with the debuff expiring at the same time as the first cleave."
+      ]
+    },
+    {
+      "name": "Aetherial Exchange + Polyominoid Sigma + Dark Dome",
+      "type": "General Mechanic",
+      "description": [
+        "Spawns two pairs of X and + ground AoEs that are tethered to each other, indicating a swap. There will be one safe square, at the corner of the X with an angled tether.",
+        "Dark Dome is an invisible AoE bait that snapshots when the cast bar finishes. Bait these AoEs in the middle of the arena before walking over to the safe square."
+      ]
+    },
+    {
+      "name": "Aetherial Exchange + Exchange of Agonies + Exocleaver",
+      "type": "General Mechanic",
+      "description": [
+        "Two pairs of tethered stack/prey markers will appear on players. This is another DPS and Tank/Healer split, so have all DPS go south of the boss and all Tanks/Healers go north.",
+        "Players with stack markers go away from their groups, while prey markers go inside the boss' hitbox without overlapping the other group.",
+        "The first cleaves from Exocleaver resolve at the same time as the stack, so be prepared to move for the second set of cleaves."
+      ]
+    },
+    {
+      "name": "Synergy",
+      "type": "Dual Tankbuster + Tank Swap",
+      "description": [
+        "Large AoE tankbuster on both tanks that also inflicts bleed.",
+        "Also inflicts a vulnerability debuff on the main tank, requiring a tank swap."
+      ]
+    },
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Heavy Raidwide",
+      "description": ["This is a heavy raidwide."]
+    },
+    {
+      "name": "Aetherial Exchange + Polyominoid Sigma + Unholy Darkness",
+      "type": "General Mechanic",
+      "description": [
+        "Similar to the first Aetherial Exchange + Polyominoid Sigma, but with healer light party stacks. The safe spot will be the square corner-adjacent to the corner where the two tethered AoEs meet.",
+        "Both stacks can fit in the same square as long as they're in opposite corners."
+      ]
+    },
+    {
+      "name": "Dark Ashes + Choros Ixou",
+      "type": "General Mechanic",
+      "description": [
+        "Each player will get a spread marker. Position with melees at inner corners and ranged at outer corners.",
+        "The first set of cleaves from Choros Ixou resolve at the same time as the spreads, so avoid the first cleave and prepare to move into the safe spot."
+      ]
+    },
+    {
+      "name": "Cachexia + Dual Predation + Ptera Ixou",
+      "type": "Major Mechanic",
+      "description": [
+        "die here"
+      ]
+    },
+    {
+      "name": "Chelic Synergy",
+      "type": "Shared Tank Cleave",
+      "description": ["Shared tank cleave that applies a bleed."]
+    },
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Heavy Raidwide",
+      "description": ["This is a heavy raidwide."]
+    },
+    {
+      "name": "Aetheric Polyominoid + Dark Sphere + Dark Dome",
+      "type": "General Mechanic",
+      "description": [
+        "Two X AoEs will appear in the middle, leaving a checkerboard-pattern of safe spots. Meanwhile, each player will get a large spread AoE. Players should spread out to assigned locations to avoid overlap.",
+        "The boss will also cast Dark Dome, so be prepared to move away to dodge the AoE bait when the cast bar fills."
+      ]
+    },
+    {
+      "name": "Aetherial Exchange + Exchange of Agonies + Choros Ixou",
+      "type": "General Mechanic",
+      "description": [
+        "Same as the first one."
+      ]
+    },
+    {
+      "name": "Aetherial Exchange + Polyominoid Sigma + Choros Ixou",
+      "type": "General Mechanic",
+      "description": [
+        "Similar to the first Aetherial Exchange + Polyominoid Sigma, but with the boss using Choros Ixou at the same time as the ground AoEs resolving.",
+        "If the tethered floor AoEs are short, the safe spots are the two tiles corner-adjacent to the X. If the tether is long, the safe spots are the two squares adjacent to the corner tethered +.",
+        "While there will be two safe spots, one will get cleaved by Choros Ixou. Wait to identify the first cleave before moving to the correct safe spot."
+      ]
+    },
+    {
+      "name": "Chelic Synergy",
+      "type": "Shared Tank Cleave",
+      "description": ["Shared tank cleave that applies a bleed."]
+    },
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Heavy Raidwide",
+      "description": ["This is a heavy raidwide."]
+    },
+    {
+      "name": "Cachexia + Transmission + Aetherial Exchange + Polyominoid Sigma + Ptera Ixou",
+      "type": "Major Mechanic",
+      "description": ["Tank LB3 this"]
+    },
+    {
+      "name": "Aetheric Polyominoid + Dark Dome",
+      "type": "General Mechanic",
+      "description": [
+        "Four X or + ground AoEs without tethers. Bait center then move to the safe spot."
+      ]
+    },
+    {
+      "name": "Aetheric Polyominoid + Choros Ixou",
+      "type": "General Mechanic",
+      "description": [
+        "Same floor pattern as the very first Aetheric Polyominoid. Avoid the Choros Ixou cleaves."
+      ]
+    },
+    {
+      "name": "Synergy",
+      "type": "Dual Tankbuster + Tank Swap",
+      "description": [
+        "Large AoE tankbuster on both tanks that also inflicts bleed.",
+        "Also inflicts a vulnerability debuff on the main tank, requiring a tank swap."
+      ]
+    },
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Heavy Raidwide",
+      "description": ["This is a heavy raidwide."]
+    },
+    {
+      "name": "Hemitheos's Dark IV",
+      "type": "Enrage",
+      "description": ["This is enrage."]
+    }
+  ]
+}
