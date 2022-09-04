@@ -2,8 +2,8 @@ import { useState } from "react";
 
 function Timeline(props: any) {
   const [mechanic, setMechanic] = useState({
-    name: "Proto-Carbuncle",
-    type: "Boss",
+    name: "Mechanic Name",
+    type: "Mechanic Type",
     description: ["Hover over a mechanic to display its description."]
   });
 
