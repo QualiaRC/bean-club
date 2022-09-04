@@ -5,6 +5,7 @@ import ImgP6 from "./res/img/p6.jpg";
 import ImgP7 from "./res/img/p7.jpg";
 import ImgP8_1 from "./res/img/p8-1.jpg";
 import ImgP8_2 from "./res/img/p8-2.jpg";
+import Banner from "./res/img/bg-abyssos.png";
 
 import P5S from "./P5S";
 import P6S from "./P6S";
@@ -35,8 +36,8 @@ function Layout() {
 
   return (
     <>
-      <header className="abyssos-header">
-        <nav className="abyssos-bosses">
+      <header className="encounter-header" style={{backgroundImage: `url("${Banner}")`}}>
+        <nav className="encounter-navigation">
           <Link to="./p5s"><div className="boss-button" data-active={path === "p5s" ? "" : undefined} data-label="P5S" style={{ backgroundImage: `url(${ImgP5})` }}></div></Link>
           <Link to="./p6s"><div className="boss-button" data-active={path === "p6s" ? "" : undefined} data-label="P6S" style={{ backgroundImage: `url(${ImgP6})` }}></div></Link>
           <Link to="./p7s"><div className="boss-button" data-active={path === "p7s" ? "" : undefined} data-label="P7S" style={{ backgroundImage: `url(${ImgP7})` }}></div></Link>

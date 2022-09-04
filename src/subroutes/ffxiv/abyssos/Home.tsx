@@ -14,7 +14,7 @@ function Home() {
   }
 
   return (
-    <div className="abyssos-home section">
+    <div className="encounter-home section">
       <h1>Abyssos (Savage)</h1>
       <p>Select a resource from the encounter banner, or view miscellaneous static resources below.</p>
 
