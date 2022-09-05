@@ -263,10 +263,114 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 }
 
 .home-content {
-  width: 66ch;
+  width: 60vw;
+  min-width: 800px;
   font-size: 1.5em;
-  margin: -50px auto;
+  margin: 0 auto;
+  z-index: 10;
 }
+
+.home-content > .section:first-child {
+  margin-top: -50px;
+}
+
+.home-content .section + .section {
+  margin-top: 1em;
+}
+
+.home-content .section:last-child {
+  margin-bottom: 50px;
+}
+
+/* Character Card */
+.character-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+.character-card {
+  background: #222;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  gap: 1em;
+  width: calc(50% - 2.25em);
+  min-width: 40ch;
+  flex-wrap: wrap;
+}
+.character-card[data-color] {
+  width: calc(50% - 2.25em - 5px);
+}
+.character-card > .character-image {
+  width: 5em;
+  height: 5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.character-card > .character-image[data-crown]:after {
+  content: '👑';
+  position: absolute;
+  font-size: 2rem;
+  width: 1em;
+  height: 1em;
+  bottom: 100%;
+  left: calc(100% - 0.6em);
+  transform: rotate(30deg);
+}
+.character-card > .character-info {
+  flex: 1;
+}
+.character-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5em;
+  gap: 0.5em;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
+}
+.character-header h1 {
+  font-size: 0.7em;
+  margin: 0;
+}
+.character-card p {
+  margin: 0;
+}
+.character-header > .character-job {
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.character-job[data-job="PLD"] { background-image: url("../../res/img/job_pld.png") }
+.character-job[data-job="WAR"] { background-image: url("../../res/img/job_war.png") }
+.character-job[data-job="DRK"] { background-image: url("../../res/img/job_drk.png") }
+.character-job[data-job="GNB"] { background-image: url("../../res/img/job_gnb.png") }
+
+.character-job[data-job="WHM"] { background-image: url("../../res/img/job_whm.png") }
+.character-job[data-job="SCH"] { background-image: url("../../res/img/job_sch.png") }
+.character-job[data-job="AST"] { background-image: url("../../res/img/job_ast.png") }
+.character-job[data-job="SGE"] { background-image: url("../../res/img/job_sge.png") }
+
+.character-job[data-job="MNK"] { background-image: url("../../res/img/job_mnk.png") }
+.character-job[data-job="DRG"] { background-image: url("../../res/img/job_drg.png") }
+.character-job[data-job="NIN"] { background-image: url("../../res/img/job_nin.png") }
+.character-job[data-job="SAM"] { background-image: url("../../res/img/job_sam.png") }
+.character-job[data-job="RPR"] { background-image: url("../../res/img/job_rpr.png") }
+
+.character-job[data-job="BRD"] { background-image: url("../../res/img/job_brd.png") }
+.character-job[data-job="MCH"] { background-image: url("../../res/img/job_mch.png") }
+.character-job[data-job="DNC"] { background-image: url("../../res/img/job_dnc.png") }
+
+.character-job[data-job="BLM"] { background-image: url("../../res/img/job_blm.png") }
+.character-job[data-job="SMN"] { background-image: url("../../res/img/job_smn.png") }
+.character-job[data-job="RDM"] { background-image: url("../../res/img/job_rdm.png") }
+
 
 /* Abyssos */
 
@@ -462,9 +566,13 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 
   .home-content {
     font-size: 1em;
-    width: calc(100vw - 48px);
+    width: calc(100vw - 24px);
+    min-width: unset;
   }
-
+  .character-card, .character-card[data-color] {
+    min-width: unset;
+    width: 100%;
+  }
   /* ABYSSOS */
   .encounter-header {
     height: 150px;
