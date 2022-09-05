@@ -1,7 +1,8 @@
+import Timeline_P7S from "./res/timeline_p7s.json";
 import YouTube from "./components/Youtube";
 import TableOfContents from "./components/TableOfContents";
 import { useEffect, useState } from "react";
-// import Timeline from "./components/Timeline";
+import Timeline from "./components/Timeline";
 
 const Videos = [
   "https://www.youtube.com/embed/ALsYpDwW8DU",
@@ -33,12 +34,17 @@ function P7S() {
 
         <h2 id="party-organization">Party Organization</h2>
         <ul>
-          <li>Specific positions for each DPS and each Support for braindead Purgation (See diagrams)</li>
-          <li>TBD</li>
+          <li>Corner positions with melees in the north and ranged in the south. One role per corner.</li>
+        </ul>
+        Within each role (4x DPS, 4x Tanks/Healers), you want the following:
+        <ul>
+          <li>Corner spreads with one corner being in the middle</li>
+          <li>Outer spreads with everyone spread evenly near the outside of the platform</li>
+          <li>Pre-assigned positions for sleepo purgation (See Diagrams)</li>
         </ul>
 
         <h2 id="timeline">Timeline</h2>
-        <p>TBD</p>
+        <Timeline timelineData={Timeline_P7S} />
 
         <h2 id="video-guides">Video Guides</h2>
         <ul className="videos">

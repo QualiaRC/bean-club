@@ -1,4 +1,4 @@
-import Timeline_P5S from "./res/timeline_p6s.json";
+import Timeline_P6S from "./res/timeline_p6s.json";
 import YouTube from "./components/Youtube";
 import Timeline from "./components/Timeline";
 import { useEffect, useState } from "react";
@@ -39,7 +39,7 @@ function P6S() {
         </ul>
 
         <h2 id="timeline">Timeline</h2>
-        <Timeline timelineData={Timeline_P5S} />
+        <Timeline timelineData={Timeline_P6S} />
 
         <h2 id="video-guides">Video Guides</h2>
         <ul className="videos">

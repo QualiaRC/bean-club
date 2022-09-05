@@ -1,0 +1,175 @@
+{
+  "timeline": [
+    {
+      "name": "Spark of Life",
+      "type": "Heavy Raidwide + Bleed",
+      "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
+    },
+    {
+      "name": "Aero II",
+      "type": "Tankbuster + DoT",
+      "description": [
+        "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
+        "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
+        "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
+      ],
+      "children": ["Dispersed Aero II", "Condensed Aero II"]
+    },
+    {
+      "name": "Blades of Attis + Immortal's Obol",
+      "type": "General Mechanic",
+      "description": [
+        "Three pairs of exaflares will appear. One goes from N -> S, one E -> W and the last SE -> NW. This can be mirrored horizontally (e.g. E -> W becomes W -> E).",
+        "At the same time, the boss casts Immortal's Obol, turning the arena into three platforms with bridges connecting them after the exaflares resolve.",
+        "This can be easily resolved by looking at the horizontal exaflare, and standing in the north section of the platform directly opposite of its starting location."
+      ]
+    },
+    {
+      "name": "Forbidden Fruit #1",
+      "type": "General Mechanic",
+      "description": [
+        "One bull seed will spawn in one of the two north platforms, and two bird seeds will spawn. The boss then cast Hemitheos's Holy III and Bough of Attis, requiring healer stacks in the northern section of the arena.",
+      "This can be resolved by going to the north platform opposite of the bull and stacking into your two light parties, all while avoiding the bird AoEs."],
+      "children": ["Hemitheos's Holy III", "Bough of Attis"]
+    },
+    {
+      "name": "Aero II",
+      "type": "Tankbuster + DoT",
+      "description": [
+        "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
+        "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
+        "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
+      ],
+      "children": ["Dispersed Aero II", "Condensed Aero II"]
+    },
+    {
+      "name": "Spark of Life",
+      "type": "Heavy Raidwide + Bleed",
+      "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
+    },
+    {
+      "name": "Baby Purgation",
+      "type": "General Mechanic",
+      "description": [
+        "Each role group (4x DPS and 4x Tanks/Healers) will receive spread and stack debuffs (Red and Blue respectively).",
+        "Have everyone group on the south platform with the first stack role in the middle of the platform and the res of the players spread out to each corner.",
+        "After this resolves, the boss will cast Bough of Attis, hitting the north platforms and cleaving one half of the arena. Have the party move to the safe north platform and repeat the stacks/spreads with the opposite groups.",
+        "After this, the boss will cast roots of attis and destroy the north bridge."
+      ],
+      "children": ["Bough of Attis", "Roots of Attis"]
+    },
+    {
+      "name": "Aero II",
+      "type": "Tankbuster + DoT",
+      "description": [
+        "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
+        "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
+        "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
+      ],
+      "children": ["Dispersed Aero II", "Condensed Aero II"]
+    },
+    {
+      "name": "Forbidden Fruit #2",
+      "type": "General Mechanic",
+      "description": [
+        "Forbidden fruit will spawn three birds, one per platform aiming across each bridge. The boss will then cast Multicast, creating both a knockback from the south platform and spread markers on every player.",
+        "This can be resolved by having preassigned healer groups and spread positions. One group can stay on the platform from the previous mechanic, while the other moves to the south platform. Spread such that you avoid the bird AoEs without overlapping players, then use knockback immunity when the knockback indicator appears.",
+        "After this, the boss breaks the final two bridges."
+      ],
+      "children": ["Multicast"]
+    },
+    {
+      "name": "Forbidden Fruit #3",
+      "type": "General Mechanic",
+      "description": [
+        "Forbidden fruit will spawn three bulls, one per platform. The boss will then cast Hemitheos's Holy III, requiring healer stacks, before the bridges reappear.",
+        "Since groups are prepositioned in separate platforms from the prior mechanic, all that needs to be done is to stand close to the middle and walk into the bridges as they spawn while soaking the healer stacks.",
+        "The boss will then cast Bough of Attis, so everyone should move to the south platform, then move into the north platform that's safe from the cleave."
+      ],
+      "children": ["Hemitheos's Holy III", "Bough of Attis"]
+    },
+    {
+      "name": "Aero II",
+      "type": "Tankbuster + DoT",
+      "description": [
+        "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
+        "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
+        "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
+      ],
+      "children": ["Dispersed Aero II", "Condensed Aero II"]
+    },
+    {
+      "name": "Forbidden Fruit #4",
+      "type": "General Mechanic",
+      "description": [""],
+      "children": ["Blades of Attis", "Multicast"]
+    },
+    {
+      "name": "Forbidden Fruit #5",
+      "type": "General Mechanic",
+      "description": [""]
+    },
+    {
+      "name": "Spark of Life",
+      "type": "Heavy Raidwide + Bleed",
+      "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
+    },
+    {
+      "name": "Immortal's Obol",
+      "type": "General Mechanic",
+      "description": ["Splits the arena into three platforms/"]
+    },
+    {
+      "name": "Inviolate Purgation",
+      "type": "Major Mechanic",
+      "description": [""],
+      "children": ["Forbidden Fruit", "Light of Life x2"]
+    },
+    {
+      "name": "Forbidden Fruit #7",
+      "type": "General Mechanic",
+      "description": [""],
+      "children": ["Roots of Attis", "Hemitheos's Glare"]
+    },
+    {
+      "name": "Famine's Harvest",
+      "type": "Major Mechanic",
+      "description": [""]
+    },
+    {
+      "name": "Death's Harvest",
+      "type": "Major Mechanic",
+      "description": [""]
+    },
+    {
+      "name": "War's Harvest",
+      "type": "Major Mechanic",
+      "description": [""]
+    },
+    {
+      "name": "Spark of Life",
+      "type": "Heavy Raidwide + Bleed",
+      "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
+    },
+    {
+      "name": "Hemethios's Holy III + Bough of Attis",
+      "type": "General Mechanic",
+      "description": ["Have everyone move to the south platform and split into two light parties to soak the stacks. Afterwards, move into the platform that's not getting cleaved."]
+    },
+    {
+      "name": "Spark of Life",
+      "type": "Heavy Raidwide + Bleed",
+      "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
+    },
+    {
+      "name": "Spark of Life",
+      "type": "Heavy Raidwide + Bleed",
+      "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
+    },
+        {
+      "name": "Light of Life",
+      "type": "Enrage",
+      "description": ["This is enrage."]
+    }
+  ]
+}
