@@ -333,6 +333,9 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   cursor: pointer;
 }
 .table-of-contents > ul > li:hover {
+  text-decoration: underline;
+}
+.table-of-contents > ul > li[data-current="true"] {
   font-weight: bold;
 }
 .table-of-contents > .top {

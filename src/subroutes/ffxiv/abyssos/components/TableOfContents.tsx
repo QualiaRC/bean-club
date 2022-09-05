@@ -1,8 +1,30 @@
+import { useEffect, useState } from "react";
+
 function TableOfContents(props: any) {
+  const [bolded, setBolded] = useState(null);
+
   const scrollTo = (id: string) => {
     const dims = document.querySelector(`#${id}`)?.getBoundingClientRect();
     window.scrollTo(window.scrollX, dims ? dims.top - 40 + window.scrollY : window.scrollY);
   }
+
+  const handleScroll = () => {
+    const currentY = window.scrollY;
+    let currentSection = props.sections[0];
+    props.sections.forEach((element: HTMLElement) => {
+      if (currentY > element.getBoundingClientRect().top - 150 + currentY) {
+        currentSection = element;
+      }
+    });
+    if (window.innerHeight + window.scrollY + 1 >= document.body.offsetHeight) currentSection = props.sections[props.sections.length - 1];
+    setBolded(currentSection);
+  }
+  useEffect(() => {
+    window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   return (
     <div className="table-of-contents section">
@@ -10,7 +32,7 @@ function TableOfContents(props: any) {
       <ul>
         {
           props.sections.map((element: HTMLElement) => {
-            return <li key={element.id} onClick={() => scrollTo(element.id)}>{element.innerText}</li>
+            return <li data-current={bolded === element} key={element.id} onClick={() => scrollTo(element.id)}>{element.innerText}</li>
           })
         }
       </ul>
