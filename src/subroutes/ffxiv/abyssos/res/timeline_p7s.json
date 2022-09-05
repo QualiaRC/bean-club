@@ -97,13 +97,21 @@
     {
       "name": "Forbidden Fruit #4",
       "type": "General Mechanic",
-      "description": [""],
+      "description": [
+        "Three minotaurs and one bull will spawn, with one minotaur being in the middle bridge.",
+        "Either all DPS or all tanks/healers will be tethered to the bull and must spread around their platform to bait the line AoEs.",
+        "The two players tethered to the minotaur must stretch their tethers to the opposite minotaur platform and stand behind said minotaur, pointed away from the bull platform.",
+        "The remaining two untethered players should bait the middle minotaur's cleaves by standing close to it, pointing away from the bull platform. After baiting the cone, simply move out of the AoE."
+      ],
       "children": ["Blades of Attis", "Multicast"]
     },
     {
       "name": "Forbidden Fruit #5",
       "type": "General Mechanic",
-      "description": [""]
+      "description": [
+        "Four birds will spawn outside the arena, tethered to each DPS, or each Tank and Healer. At the same time, four towers will appear that must be soaked. Getting hit by a bird will knock a player back.",
+        "To resolve, preposition in your designated corners. Non-tethered players simply stand in their corresponding tower. Tethered players stretch the tether directly across the middle of the arena and use anti-knockback. Tower players should adjust such that they don't get hit by any close birds."
+      ]
     },
     {
       "name": "Spark of Life",
@@ -113,34 +121,37 @@
     {
       "name": "Immortal's Obol",
       "type": "General Mechanic",
-      "description": ["Splits the arena into three platforms."]
+      "description": ["Splits the arena into three platforms. Coordinate a platform for the entire group to stand on to reduce movement and heals."]
     },
     {
       "name": "Inviolate Purgation",
       "type": "Major Mechanic",
-      "description": [""],
-      "children": ["Forbidden Fruit", "Light of Life x2"]
+      "description": ["See Strategies."],
+      "children": ["Forbidden Fruit #6", "Light of Life x2"]
     },
     {
       "name": "Forbidden Fruit #7",
       "type": "General Mechanic",
-      "description": [""],
+      "description": [
+        "Two birds will spawn, each on a random platform. The boss will cast Roots of Attis to destroy the middle bridge, then cast Hemitheos's Glare which spawns a chasing AoE marker on each player. A few seconds later, outer bridges will respawn.",
+        "To resolve, have everyone stack on the edge of the platform without a bird and identify the platform with the bird not pointed at the group. As the chasing AoEs start dropping, make your way towards the identified platform, wait for the bridge to appear, then cross the bridge."
+      ],
       "children": ["Roots of Attis", "Hemitheos's Glare"]
     },
     {
       "name": "Famine's Harvest",
       "type": "Major Mechanic",
-      "description": [""]
+      "description": ["See Strategies."]
     },
     {
       "name": "Death's Harvest",
       "type": "Major Mechanic",
-      "description": [""]
+      "description": ["See Strategies."]
     },
     {
       "name": "War's Harvest",
       "type": "Major Mechanic",
-      "description": [""]
+      "description": ["See Strategies."]
     },
     {
       "name": "Spark of Life",
@@ -162,7 +173,7 @@
       "type": "Heavy Raidwide + Bleed",
       "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
     },
-        {
+    {
       "name": "Light of Life",
       "type": "Enrage",
       "description": ["This is enrage."]

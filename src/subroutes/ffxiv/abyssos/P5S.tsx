@@ -28,7 +28,7 @@ function P5S() {
 
         <h2 id="party-organization">Party Organization</h2>
         <ul>
-          <li>Four role-based pairings (Tank, Healer, Melee DPS, Ranged DPS)</li>
+          <li>Four role-based pairings (2x Tank, 2x Healer, 2x Melee DPS, 2x Ranged DPS)</li>
           <li>Clock Positions</li>
           <li>Two light parties (Healer, Tank, DPS, DPS)</li>
         </ul>

@@ -113,7 +113,7 @@
       "name": "Cachexia #1",
       "type": "Major Mechanic",
       "description": [
-        "die here"
+        "See Strategies."
       ],
       "children": [
         "Dual Predation", "Ptera Ixou"
@@ -170,7 +170,7 @@
     {
       "name": "Cachexia #2",
       "type": "Major Mechanic",
-      "description": ["Tank LB3 this"],
+      "description": ["Tank LB3 this or see Strategies."],
       "children": [
         "Transmission", "Aetherial Exchange + Polyominoid Sigma #4", "Ptera Ixou"
       ]

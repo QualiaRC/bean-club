@@ -35,7 +35,7 @@ function P6S() {
         <h2 id="party-organization">Party Organization</h2>
         <ul>
           <li>Two light parties (Healer, Tank, DPS, DPS)</li>
-          <li>Four pairs of DPS + Tank/Healer</li>
+          <li>Four pairs of 1x DPS + 1x Tank/Healer</li>
         </ul>
 
         <h2 id="timeline">Timeline</h2>
@@ -66,6 +66,18 @@ function P6S() {
               return <li key={url}><img src={url} alt="" /></li>
             })
           }
+        </ul>
+
+        <h2 id="strategies">Strategies</h2>
+        <ul className="toolboxes">
+          <li>
+            <div>Cachexia #1</div>
+            <button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=504966792291661&preview=1", "_blank")}>Toolbox</button>
+          </li>
+          <li>
+            <div>Cachexia #2</div>
+            <button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=727967058691661&preview=1", "_blank")}>Toolbox</button>
+          </li>
         </ul>
       </div>
 
