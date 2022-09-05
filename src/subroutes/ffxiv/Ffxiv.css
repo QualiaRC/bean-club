@@ -216,11 +216,6 @@ body {
   z-index: 10;
 }
 
-.section + .section {
-  margin-top: 2em;
-}
-
-
 .section > h1, .section > h2, .section > p {
   margin: 0;
   padding: 0;
@@ -309,19 +304,55 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 
 .page-abyssos, .page-dragonsong {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   width: 50vw;
   margin: 0 auto;
   min-width: 800px;
+  gap: 1em;
 }
 
 .encounter-home, .abyssos-guide {
   font-size: 1.5rem;
   flex: 1;
-  width: 100%;
 }
 
+.table-of-contents {
+  font-size: 1rem;
+  position: sticky;
+  top: 5em;
+}
+.table-of-contents > h1 {
+  border-bottom: 1px solid #ccc;
+}
+.table-of-contents > ul {
+  margin: 0; padding: 0 0 0 1em;
+}
+.table-of-contents > ul > li {
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.table-of-contents > ul > li:hover {
+  font-weight: bold;
+}
+.table-of-contents > .top {
+  cursor: pointer;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 175%;
+  bottom: 1em;
+  right: 1em;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+.table-of-contents > .top:hover {
+  background: #ccc;
+  color: #181818;
+  font-weight: bold;
+}
 
 .boss-button {
   width: 3em;
@@ -466,6 +497,9 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   }
   .timeline-container > .mechanic-description > h2 > span.mechanic-type {
     font-size: 0.5em;
+  }
+  .table-of-contents {
+    display: none;
   }
   img, iframe {
     max-width: 80%;
