@@ -306,10 +306,10 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 50vw;
+  width: 60vw;
   margin: 0 auto;
-  min-width: 800px;
   gap: 1em;
+  min-width: 800px;
 }
 
 .encounter-home, .abyssos-guide {
@@ -389,11 +389,11 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 2em;
+  gap: 1em;
 }
 .timeline-container > .timeline {
   cursor: default;
-  width: 50%;
+  flex: 1 1 0;
 }
 .timeline-container > .timeline .timeline-mechanic {
   font-weight: bold;
@@ -403,8 +403,8 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   top: 5em;
   padding: 1em;
   background: #cccccc11;
-  flex: 1;
   height: fit-content;
+  flex: 1 1 0;
 }
 .timeline-container > .mechanic-description > h2 {
   border-bottom: 1px solid #ccc;
@@ -486,10 +486,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
     padding-left: 1em;
   }
   .timeline-container {
-    gap: 0;
-  }
-  .timeline-container > .mechanic-description {
-    flex-basis: 50%;
+    gap: 4px;
     font-size: 0.8rem;
   }
   .timeline-container > .mechanic-description > h2 {

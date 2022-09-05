@@ -6,14 +6,13 @@
       "description": ["Heavy raidwide that afflicts the entire party with a bleeding debuff."]
     },
     {
-      "name": "Aero II",
+      "name": "Dispersed / Condensed Aero II",
       "type": "Tankbuster + DoT",
       "description": [
         "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
         "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
         "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
-      ],
-      "children": ["Dispersed Aero II", "Condensed Aero II"]
+      ]
     },
     {
       "name": "Blades of Attis + Immortal's Obol",
@@ -33,14 +32,13 @@
       "children": ["Hemitheos's Holy III", "Bough of Attis"]
     },
     {
-      "name": "Aero II",
+      "name": "Dispersed / Condensed Aero II",
       "type": "Tankbuster + DoT",
       "description": [
         "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
         "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
         "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
-      ],
-      "children": ["Dispersed Aero II", "Condensed Aero II"]
+      ]
     },
     {
       "name": "Spark of Life",
@@ -59,14 +57,13 @@
       "children": ["Bough of Attis", "Roots of Attis"]
     },
     {
-      "name": "Aero II",
+      "name": "Dispersed / Condensed Aero II",
       "type": "Tankbuster + DoT",
       "description": [
         "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
         "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
         "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
-      ],
-      "children": ["Dispersed Aero II", "Condensed Aero II"]
+      ]
     },
     {
       "name": "Forbidden Fruit #2",
@@ -89,14 +86,13 @@
       "children": ["Hemitheos's Holy III", "Bough of Attis"]
     },
     {
-      "name": "Aero II",
+      "name": "Dispersed / Condensed Aero II",
       "type": "Tankbuster + DoT",
       "description": [
         "One of two possible tankbusters, both of which apply a windburn DoT on the targets.",
         "Dispersed Aero II targets the top two players in the enmity list with a heavy-hitting medium-sized AoE and a windburn DoT.",
         "Condensed Aero II targets the main-tank with a shared AoE, requiring the off-tank to soak it with them and giving them both a windburn DoT. Tanks can use invuln to make healing easier."
-      ],
-      "children": ["Dispersed Aero II", "Condensed Aero II"]
+      ]
     },
     {
       "name": "Forbidden Fruit #4",
@@ -117,7 +113,7 @@
     {
       "name": "Immortal's Obol",
       "type": "General Mechanic",
-      "description": ["Splits the arena into three platforms/"]
+      "description": ["Splits the arena into three platforms."]
     },
     {
       "name": "Inviolate Purgation",

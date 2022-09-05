@@ -24,7 +24,7 @@ const Diagrams = [
 function P7S() {
   const [sections, setSections] = useState([]);
   useEffect(() => {
-    setSections(Array.from(document.querySelectorAll(".abyssos-guide h2")));
+    setSections(Array.from(document.querySelectorAll(".abyssos-guide > h2")));
   }, []);
 
   return (
