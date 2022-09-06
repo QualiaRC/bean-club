@@ -6,7 +6,8 @@ import Timeline from "./components/Timeline";
 
 const Videos = [
   "https://www.youtube.com/embed/ALsYpDwW8DU",
-  "https://www.youtube.com/embed/DeZ5tTSYLHs"
+  "https://www.youtube.com/embed/590FECiKaVc",
+  "https://www.youtube.com/embed/Dlsfp7o0Y1A"
 ];
 
 const Povs = [
@@ -15,10 +16,10 @@ const Povs = [
 ];
 
 const Diagrams = [
-  "https://cdn.discordapp.com/attachments/836704939182129203/1015765666965491803/unknown.png",
-  "https://cdn.discordapp.com/attachments/1014267505583337604/1015273123010072586/unknown.png",
-  "https://cdn.discordapp.com/attachments/1014267505583337604/1015679364651819150/unknown.png",
-  "https://cdn.discordapp.com/attachments/1014267505583337604/1015692852535242752/unknown.png"
+  "https://cdn.discordapp.com/attachments/992596350585819136/1015855873446387793/unknown.png",
+  "https://cdn.discordapp.com/attachments/992596350585819136/1015855926483353650/unknown.png",
+  "https://cdn.discordapp.com/attachments/1014267505583337604/1015692852535242752/unknown.png",
+  "https://cdn.discordapp.com/attachments/992596350585819136/1015854334237483038/unknown.png"
 ];
 
 function P7S() {
