@@ -347,30 +347,6 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.character-job[data-job="PLD"] { background-image: url("../../res/img/job_pld.png") }
-.character-job[data-job="WAR"] { background-image: url("../../res/img/job_war.png") }
-.character-job[data-job="DRK"] { background-image: url("../../res/img/job_drk.png") }
-.character-job[data-job="GNB"] { background-image: url("../../res/img/job_gnb.png") }
-
-.character-job[data-job="WHM"] { background-image: url("../../res/img/job_whm.png") }
-.character-job[data-job="SCH"] { background-image: url("../../res/img/job_sch.png") }
-.character-job[data-job="AST"] { background-image: url("../../res/img/job_ast.png") }
-.character-job[data-job="SGE"] { background-image: url("../../res/img/job_sge.png") }
-
-.character-job[data-job="MNK"] { background-image: url("../../res/img/job_mnk.png") }
-.character-job[data-job="DRG"] { background-image: url("../../res/img/job_drg.png") }
-.character-job[data-job="NIN"] { background-image: url("../../res/img/job_nin.png") }
-.character-job[data-job="SAM"] { background-image: url("../../res/img/job_sam.png") }
-.character-job[data-job="RPR"] { background-image: url("../../res/img/job_rpr.png") }
-
-.character-job[data-job="BRD"] { background-image: url("../../res/img/job_brd.png") }
-.character-job[data-job="MCH"] { background-image: url("../../res/img/job_mch.png") }
-.character-job[data-job="DNC"] { background-image: url("../../res/img/job_dnc.png") }
-
-.character-job[data-job="BLM"] { background-image: url("../../res/img/job_blm.png") }
-.character-job[data-job="SMN"] { background-image: url("../../res/img/job_smn.png") }
-.character-job[data-job="RDM"] { background-image: url("../../res/img/job_rdm.png") }
-
 
 /* Abyssos */
 
