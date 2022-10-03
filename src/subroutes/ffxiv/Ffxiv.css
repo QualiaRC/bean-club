@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
 }
 
 body {
@@ -297,7 +296,6 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   position:relative;
   gap: 1em;
   width: calc(50% - 2.25em);
-  min-width: 40ch;
   flex-wrap: wrap;
 }
 .character-card[data-color] {
@@ -322,6 +320,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 }
 .character-card > .character-info {
   flex: 1;
+  height: 5em;
 }
 .character-header {
   display: flex;
@@ -337,6 +336,13 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 .character-header h1 {
   font-size: 0.7em;
   margin: 0;
+}
+.character-info {
+  display: flex;
+  flex-direction: column;
+}
+.character-description {
+  overflow-y: auto;
 }
 .character-card p {
   margin: 0;
@@ -509,8 +515,15 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 .timeline-container > .mechanic-description > p + p {
   margin-top: 1rem;
 }
-
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 800px) {
+  html {
+    font-size: unset;
+  }
   #container > .navbar {
     font-size: 2.5rem;
   }
