@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import Ffxiv from "./subroutes/ffxiv/Ffxiv";
+import Certified from "./subroutes/certified/Certified";
 import Logo from "./res/img/ff14bean.png";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
         <Route path="/ffxiv/*" element={<Ffxiv />} />
+        <Route path="/certified/*" element={<Certified />} />
       </Routes>
     </Router>
   );
