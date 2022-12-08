@@ -19,7 +19,9 @@ const Diagrams = [
   "https://cdn.discordapp.com/attachments/992596350585819136/1015855873446387793/unknown.png",
   "https://cdn.discordapp.com/attachments/992596350585819136/1015855926483353650/unknown.png",
   "https://cdn.discordapp.com/attachments/1014267505583337604/1015692852535242752/unknown.png",
-  "https://cdn.discordapp.com/attachments/992596350585819136/1015854334237483038/unknown.png"
+  "https://cdn.discordapp.com/attachments/992596350585819136/1015854334237483038/unknown.png",
+  "https://media.discordapp.net/attachments/992596350585819136/1017596538689704017/unknown.png",
+  "https://cdn.discordapp.com/attachments/992596350585819136/1016911105349656687/unknown.png"
 ];
 
 function P7S() {
