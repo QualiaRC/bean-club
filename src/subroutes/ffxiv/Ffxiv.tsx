@@ -64,6 +64,7 @@ function Wrapper() {
 
       <div id="main-section">
         <Outlet />
+        <div className="copyright">Copyright &copy; {new Date().getFullYear()} Bean Club All Rights Reserved.</div>
       </div>
     </div>
   )

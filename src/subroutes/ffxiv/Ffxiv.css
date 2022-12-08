@@ -281,6 +281,10 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   margin-bottom: 50px;
 }
 
+.copyright {
+  margin: 1em auto;
+}
+
 /* Character Card */
 .character-cards {
   display: flex;
