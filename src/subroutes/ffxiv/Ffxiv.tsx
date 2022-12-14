@@ -4,6 +4,7 @@ import { Routes, Route, Link, Outlet, Navigate, useLocation } from "react-router
 import Home from "./Home";
 import Abyssos from "./abyssos/Abyssos";
 import Dragonsong from "./dragonsong/Dragonsong";
+import Snow from "./components/Snow"
 
 function Ffxiv() {
   return (
@@ -48,6 +49,7 @@ function Wrapper() {
       <nav className="navbar">
         <Link to="/ffxiv"><div className="logo-button" /></Link>
         <div className={menuOpen ? "icon-close" : "icon-menu"} onClick={() => { toggleState(!menuOpen) }} />
+        <Snow />
       </nav>
 
       { menuOpen ? <div className="close-region" onClick={() => { toggleState(false) }} /> : null }
@@ -67,6 +69,7 @@ function Wrapper() {
         <div className="copyright">Copyright &copy; {new Date().getFullYear()} Bean Club All Rights Reserved.</div>
       </div>
     </div>
+
   )
 }
 
