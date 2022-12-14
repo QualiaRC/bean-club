@@ -1,5 +1,9 @@
-import { CSSProperties, useEffect, useState } from "react";
+import { CSSProperties, useLayoutEffect, useState } from "react";
 
+let[screenX, screenY] = [window.innerWidth, window.innerHeight];
+window.addEventListener("resize", () => {
+  [screenX, screenY] = [window.innerWidth, window.innerHeight];
+});
 
 class SnowParticle {
   x: number;
@@ -8,12 +12,12 @@ class SnowParticle {
   
   constructor(depth: number, y: number) {
     this.y = y;
-    this.x = Math.random() * window.innerWidth * 2 - window.innerWidth;
+    this.x = Math.random() * screenX * 2 - screenX;
     this.depth = depth;
   }
   
   update() {
-    if(this.y > window.innerHeight) {
+    if(this.y > screenY) {
       return snowSet.delete(this);
     }
     
@@ -32,38 +36,46 @@ const canvasStyle = {
   filter: "blur(1px)"
 } as CSSProperties;
 
-for(let i = 0; i < 1500; i++) {
-  snowSet.add(new SnowParticle(Math.random() * 3 + 1, Math.random() * window.innerHeight));
+for(let i = 0; i < 2000; i++) {
+  snowSet.add(new SnowParticle(Math.random() * 3 + 1, Math.random() * screenY));
 }
 
 function Snow() {
   const [enabled, setEnabled] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if(!enabled) return;
+    const canvas = document.getElementById("snow") as HTMLCanvasElement;
+    const context = canvas.getContext("2d");
     
-    function updateSnow() {
-      const canvas = document.getElementById("snow") as HTMLCanvasElement;
-      if(!enabled || !canvas) return requestAnimationFrame(updateSnow);;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      const context = canvas.getContext("2d");
+    let timerId: number;
+    
+    const updateSnow = () => {
+      canvas.width = screenX;
+      canvas.height = screenY;
+      
       if(context == null) return;
       context.fillStyle = "white";
-      context?.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-      for(let i = 0; i < 3; i++) {
-        snowSet.add(new SnowParticle(Math.random() * 3 + 1, -10));
+      context.clearRect(0, 0, screenX, screenY);
+      
+      if(snowSet.size < 2000) {
+        for(let i = 0; i < 3; i++) {
+          snowSet.add(new SnowParticle(Math.random() * 3 + 1, -10));
+        }
       }
-  
+
       snowSet.forEach((particle: SnowParticle) => {
         particle.update()
-        context?.fillRect(particle.x, particle.y, 2, 2);
+        context.fillRect(particle.x, particle.y, 2, 2);
       });
-  
-      requestAnimationFrame(updateSnow);
+      
+      timerId = requestAnimationFrame(updateSnow);
     }
-    updateSnow();
-  }, []);
+
+    timerId = requestAnimationFrame(updateSnow);
+
+    return () => cancelAnimationFrame(timerId);
+  }, [enabled]);
 
   function toggleEnabled() {
     setEnabled(!enabled);
