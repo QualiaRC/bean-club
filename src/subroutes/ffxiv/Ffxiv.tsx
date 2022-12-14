@@ -4,7 +4,8 @@ import { Routes, Route, Link, Outlet, Navigate, useLocation } from "react-router
 import Home from "./Home";
 import Abyssos from "./abyssos/Abyssos";
 import Dragonsong from "./dragonsong/Dragonsong";
-import Snow from "./components/Snow"
+import Slider from "./components/Slider";
+import Snow from "./components/Snow";
 
 function Ffxiv() {
   return (
@@ -27,6 +28,8 @@ function Wrapper() {
   }, [location]);
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [snowEnabled, setSnowEnabled] = useState(true);
+
   const toggleState = (state:boolean) => {
     setMenuOpen(state);
   }
@@ -49,10 +52,11 @@ function Wrapper() {
       <nav className="navbar">
         <Link to="/ffxiv"><div className="logo-button" /></Link>
         <div className={menuOpen ? "icon-close" : "icon-menu"} onClick={() => { toggleState(!menuOpen) }} />
-        <Snow />
+        <Slider label="❄️" toggled={(e: boolean) => {setSnowEnabled(e)}} />
       </nav>
 
       { menuOpen ? <div className="close-region" onClick={() => { toggleState(false) }} /> : null }
+      <Snow enabled={snowEnabled}/>
       <nav className="drawer" data-open={menuOpen ? "" : undefined}>
         <ul>
           <li><h1>Encounters</h1></li>
