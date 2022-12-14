@@ -352,7 +352,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 .character-card p {
   margin: 0;
 }
-.character-header > .character-job {
+.character-job {
   width: 1em;
   height: 1em;
   background-size: contain;

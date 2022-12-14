@@ -51,8 +51,6 @@ class SnowParticles {
         context.fillRect(particle.position.x, particle.position.y, this.#particleSize, this.#particleSize);
       }
     });
-
-    console.log(this.#snowSet.size);
   }
 
   static updateScreenDimensions(screenX: number, screenY: number) {

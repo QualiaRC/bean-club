@@ -18,6 +18,7 @@ import DNC from "../../../res/img/job_dnc.png";
 import BLM from "../../../res/img/job_blm.png";
 import SMN from "../../../res/img/job_smn.png";
 import RDM from "../../../res/img/job_rdm.png";
+import EMPTY from "../../../res/img/empty.png";
 
 const IMAGE_MAP: {[key: string]: string} = {
     PLD, WAR, DRK, GNB,
@@ -29,7 +30,7 @@ const IMAGE_MAP: {[key: string]: string} = {
 
 
 function JobIcon(props: any) {
-    return <div className="character-job" style={{backgroundImage: `url("${IMAGE_MAP[props.job]}")`}} />
+    return <div className="character-job" style={{backgroundImage: `url("${IMAGE_MAP[props.job] || EMPTY}")`}} />
 }
 
 export default JobIcon;

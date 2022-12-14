@@ -1,5 +1,5 @@
 import { useState } from "react";
-import StaticPositions from "./res/img/static_pos.png";
+import IconGrid from "../components/IconGrid"
 
 function Home() {
   const [valid, setValid] = useState(false);
@@ -12,6 +12,25 @@ function Home() {
   const openUrl = (url: string) => {
     window.open(url, "_blank");
   }
+
+  const gridClockPositions = [
+    ["", "", "WAR", "", ""],
+    ["", "RDM", "", "MCH", ""],
+    ["SCH", "", "", "", "WHM"],
+    ["", "SAM", "", "NIN", ""],
+    ["", "", "PLD", "", ""],
+  ];
+
+  const gridVerticalSpreads = [
+    ["WAR", "", "PLD"],
+    ["RDM", "", "MCH"],
+    ["SCH", "", "WHM"],
+    ["SAM", "", "NIN"]
+  ];
+
+  const gridHorizontalSpreads = [
+    ["RDM", "SCH", "SAM", "WAR", "", "PLD", "NIN", "WHM", "MCH"]
+  ];
 
   return (
     <div className="encounter-home section">
@@ -27,7 +46,14 @@ function Home() {
       }
 
       <h2>General-Purpose Positions</h2>
-      <img src={StaticPositions} alt="Static Positions" />
+      Clock Positions<br/><br/>
+      <IconGrid grid={gridClockPositions} />
+      <br/><br/>
+      Vertical Spreads<br/><br/>
+      <IconGrid grid={gridVerticalSpreads} />
+      <br/><br/>
+      Horizontal Spreads<br/><br/>
+      <IconGrid grid={gridHorizontalSpreads} />
     </div>
   )
 }
