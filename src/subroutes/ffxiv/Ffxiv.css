@@ -288,10 +288,9 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 
 /* Character Card */
 .character-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 0.5em;
-  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
 }
 .character-card {
   background: #222;
@@ -300,11 +299,6 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   flex-direction: row;
   position:relative;
   gap: 1em;
-  width: calc(50% - 2.25em);
-  flex-wrap: wrap;
-}
-.character-card[data-color] {
-  width: calc(50% - 2.25em - 5px);
 }
 .character-card > .character-image {
   width: 5em;
@@ -563,10 +557,10 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
     width: calc(100vw - 24px);
     min-width: unset;
   }
-  .character-card, .character-card[data-color] {
-    min-width: unset;
-    width: 100%;
+  .character-cards {
+    grid-template-columns: repeat(1, 1fr);
   }
+
   /* ABYSSOS */
   .encounter-header {
     height: 150px;
