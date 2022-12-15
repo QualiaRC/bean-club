@@ -1,5 +1,6 @@
 import { useState } from "react";
 import IconGrid from "../components/IconGrid"
+import { Job } from "../components/JobIcon"
 
 function Home() {
   const [valid, setValid] = useState(false);
@@ -12,26 +13,7 @@ function Home() {
   const openUrl = (url: string) => {
     window.open(url, "_blank");
   }
-
-  const gridClockPositions = [
-    ["", "", "WAR", "", ""],
-    ["", "RDM", "", "MCH", ""],
-    ["SCH", "", "", "", "WHM"],
-    ["", "SAM", "", "NIN", ""],
-    ["", "", "PLD", "", ""],
-  ];
-
-  const gridVerticalSpreads = [
-    ["WAR", "", "PLD"],
-    ["RDM", "", "MCH"],
-    ["SCH", "", "WHM"],
-    ["SAM", "", "NIN"]
-  ];
-
-  const gridHorizontalSpreads = [
-    ["RDM", "SCH", "SAM", "WAR", "", "PLD", "NIN", "WHM", "MCH"]
-  ];
-
+  
   return (
     <div className="encounter-home section">
       <h1>Abyssos (Savage)</h1>
@@ -47,13 +29,26 @@ function Home() {
 
       <h2>General-Purpose Positions</h2>
       Clock Positions<br/><br/>
-      <IconGrid grid={gridClockPositions} />
+      <IconGrid grid={[
+        ['', '', Job.WAR, '', ''],
+        ['', Job.RDM, '', Job.MCH, ''],
+        [Job.SCH, '', '', '', Job.WHM],
+        ['', Job.SAM, '', Job.NIN, ''],
+        ['', '', Job.PLD, '', ''],
+      ]} />
       <br/><br/>
       Vertical Spreads<br/><br/>
-      <IconGrid grid={gridVerticalSpreads} />
+      <IconGrid grid={[
+        [Job.WAR, '', Job.PLD],
+        [Job.RDM, '', Job.MCH],
+        [Job.SCH, '', Job.WHM],
+        [Job.SAM, '', Job.NIN]
+      ]} />
       <br/><br/>
       Horizontal Spreads<br/><br/>
-      <IconGrid grid={gridHorizontalSpreads} />
+      <IconGrid grid={[
+        [Job.RDM, Job.SCH, Job.SAM, Job.WAR, '', Job.PLD, Job.NIN, Job.WHM, Job.MCH]
+      ]} />
     </div>
   )
 }

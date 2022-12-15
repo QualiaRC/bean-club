@@ -1,4 +1,3 @@
-
 import PLD from "../../../res/img/job_pld.png";
 import WAR from "../../../res/img/job_war.png";
 import DRK from "../../../res/img/job_drk.png";
@@ -20,17 +19,25 @@ import SMN from "../../../res/img/job_smn.png";
 import RDM from "../../../res/img/job_rdm.png";
 import EMPTY from "../../../res/img/empty.png";
 
-const IMAGE_MAP: {[key: string]: string} = {
+export enum Job {
     PLD, WAR, DRK, GNB,
     WHM, SCH, AST, SGE,
     MNK, DRG, NIN, SAM, RPR,
     BRD, MCH, DNC,
-    BLM, SMN, RDM
+    BLM, SMN, RDM,
+    EMPTY
+};
+const IMAGE_MAP: {[key in Job]: string} = {
+    [Job.PLD]: PLD, [Job.WAR]: WAR, [Job.DRK]: DRK, [Job.GNB]: GNB,
+    [Job.WHM]: WHM, [Job.SCH]: SCH, [Job.AST]: AST, [Job.SGE]: SGE,
+    [Job.MNK]: MNK, [Job.DRG]: DRG, [Job.NIN]: NIN, [Job.SAM]: SAM, [Job.RPR]: RPR,
+    [Job.BRD]: BRD, [Job.MCH]: MCH, [Job.DNC]: DNC,
+    [Job.BLM]: BLM, [Job.SMN]: SMN, [Job.RDM]: RDM,
+    [Job.EMPTY]: EMPTY
 };
 
-
 function JobIcon(props: any) {
-    return <div className="character-job" style={{backgroundImage: `url("${IMAGE_MAP[props.job] || EMPTY}")`}} />
+    return <div className="character-job" style={{backgroundImage: `url("${IMAGE_MAP[props.job as Job] || EMPTY}")`}} />
 }
 
 export default JobIcon;

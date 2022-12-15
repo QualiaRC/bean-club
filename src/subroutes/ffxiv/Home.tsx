@@ -13,6 +13,7 @@ import MemberAzera from "../../res/img/member_azera.png";
 import MemberKas from "../../res/img/member_kas.png";
 
 import CharacterCard from "./components/CharacterCard";
+import { Job } from "./components/JobIcon";
 import { useEffect, useState } from "react";
 
 function Home() {
@@ -51,14 +52,14 @@ function Home() {
         <div className="section members">
           <h1>Current Raid Group</h1>
           <div className="character-cards">
-              <CharacterCard firstName="Mesmerith" lastName="Luminas" color="#223862" description="Designated Danger Dorito (DDD). Tank stance is in his opener." job="PLD" image={MemberMesmerith} />
-              <CharacterCard firstName="Faine" lastName="Esperia" color="#223862" description="Omni-tank, somehow knows every RP venue in the entire game." job="WAR" image={MemberFaine} />
-              <CharacterCard firstName="Cynthia" lastName="Ashmore" color="#3b6629" description="Greediest healer this side of the Mississippi. Unreasonably hates lalafells." job="SCH" image={MemberCynthia} />
-              <CharacterCard firstName="Fleurette" lastName="Jantelloux" color="#3b6629" description="Super clutch heals, enabler of triple energy drain cohealers." job="WHM" image={MemberFleurette} />
-              <CharacterCard firstName="Zenith" lastName="Wright" color="#653535" description="Fearless leader, frog man, loves napping." job="MCH" image={MemberZenith} />
-              <CharacterCard firstName="Dema" lastName="Morgendammerung" color="#653535" description="Favorite verb is swish-swish. Frequents Limsa Lominsa." job="SAM" image={MemberDema} />
-              <CharacterCard firstName="Azera" lastName="Melia" color="#653535" description="Banter is only good when he says it's good. Third healer, unless it's burst time." job="RDM" image={MemberAzera} />
-              <CharacterCard firstName="Kas" lastName="Ryujin" color="#653535" description="Resident scientist and Powerpoint master. Indifferent towards bunnies." job="NIN" image={MemberKas} />
+              <CharacterCard firstName="Mesmerith" lastName="Luminas" color="#223862" description="Designated Danger Dorito (DDD). Tank stance is in his opener." job={Job.PLD} image={MemberMesmerith} />
+              <CharacterCard firstName="Faine" lastName="Esperia" color="#223862" description="Omni-tank, somehow knows every RP venue in the entire game." job={Job.WAR} image={MemberFaine} />
+              <CharacterCard firstName="Cynthia" lastName="Ashmore" color="#3b6629" description="Greediest healer this side of the Mississippi. Unreasonably hates lalafells." job={Job.SCH} image={MemberCynthia} />
+              <CharacterCard firstName="Fleurette" lastName="Jantelloux" color="#3b6629" description="Super clutch heals, enabler of triple energy drain cohealers." job={Job.WHM} image={MemberFleurette} />
+              <CharacterCard firstName="Zenith" lastName="Wright" color="#653535" description="Fearless leader, frog man, loves napping." job={Job.MCH} image={MemberZenith} />
+              <CharacterCard firstName="Dema" lastName="Morgendammerung" color="#653535" description="Favorite verb is swish-swish. Frequents Limsa Lominsa." job={Job.SAM} image={MemberDema} />
+              <CharacterCard firstName="Azera" lastName="Melia" color="#653535" description="Banter is only good when he says it's good. Third healer, unless it's burst time." job={Job.RDM} image={MemberAzera} />
+              <CharacterCard firstName="Kas" lastName="Ryujin" color="#653535" description="Resident scientist and Powerpoint master. Indifferent towards bunnies." job={Job.NIN} image={MemberKas} />
           </div>
         </div>
       </div>
