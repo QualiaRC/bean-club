@@ -55,7 +55,6 @@ body {
 #container > #main-section {
   padding-top: 3.6em;
   flex: 1;
-  overflow-x: hidden;
 }
 
 .logo-button {

@@ -1,5 +1,7 @@
 import YouTube from "./components/Youtube";
 import TableOfContents from "./components/TableOfContents";
+import IconGrid from "../components/IconGrid"
+import { Job } from "../components/JobIcon"
 import { useEffect, useState } from "react";
 
 const Videos = [
@@ -38,6 +40,30 @@ function P8S2() {
           <li>Designate 1 tank and 1 melee DPS to flex for Natural Alignment ice</li>
           <li>Have a priority system for Dominion towers, from left to right</li>
         </ul>
+        
+        <br/>
+        Horizontal Spreads for Natural Alignment<br/>
+        <IconGrid grid={[
+          [Job.SAM, Job.PLD, Job.WAR, Job.NIN],
+          [Job.RDM, Job.SCH, Job.WHM, Job.MCH]
+        ]} />
+
+        <br/><br/>
+        Melee Flexers for NA Fire/Ice
+        <IconGrid grid={[
+          [Job.PLD, Job.SAM]
+        ]} />
+
+        <br/><br/>
+        Horizontal Spreads for Limitless Desolation and Dominion
+        <IconGrid grid={[
+          [Job.WAR, Job.WHM, Job.SAM, Job.NIN],
+          [Job.PLD, Job.SCH, Job.RDM, Job.MCH]
+        ]} />
+        <i>Dominion tower priority from left to right is THMR</i><br/>
+
+        <br/><br/>
+        The rest is shown in the Diagrams section
 
         <h2 id="timeline">Timeline</h2>
         <ul className="toolboxes">
