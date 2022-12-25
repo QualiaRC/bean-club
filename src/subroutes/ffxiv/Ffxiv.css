@@ -386,7 +386,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
 }
 
 
-.page-abyssos, .page-dragonsong {
+.page-abyssos, .page-dragonsong, .page-omega {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -568,10 +568,10 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
     font-size: 4.5vw;
     width: calc(100vw - 2em);
   }
-  .encounter-navigation.dragonsong {
+  .encounter-navigation.dragonsong, .encounter-navigation.omega {
     font-size: 3.2vw;
   }
-  .page-abyssos, .page-dragonsong {
+  .page-abyssos, .page-dragonsong, .page-omega {
     font-size: 1rem;
     width: calc(100vw - 24px);
     margin: 1.5em auto;

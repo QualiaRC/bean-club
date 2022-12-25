@@ -4,6 +4,7 @@ import { Routes, Route, Link, Outlet, Navigate, useLocation } from "react-router
 import Home from "./Home";
 import Abyssos from "./abyssos/Abyssos";
 import Dragonsong from "./dragonsong/Dragonsong";
+import Omega from "./omega/Omega";
 import Slider from "./components/Slider";
 import Snow from "./components/Snow";
 
@@ -14,6 +15,7 @@ function Ffxiv() {
         <Route path="" element={<Home />} />
         <Route path="/abyssos/*" element={<Abyssos />} />
         <Route path="/dragonsong/*" element={<Dragonsong />} />
+        <Route path="/omega/*" element={<Omega />} />
         <Route path="*" element={<Navigate to="/ffxiv" replace />} />
       </Route>
     </Routes>
@@ -62,6 +64,8 @@ function Wrapper() {
           <li><h1>Encounters</h1></li>
           <li><Link to="./abyssos"><div>Abyssos (Savage)</div></Link></li>
           <li><Link to="./dragonsong"><div>Dragonsong's Reprise (Ultimate)</div></Link></li>
+          <li><Link to="./omega"><div>The Omega Protocol (Ultimate)</div></Link></li>
+          
           <li><h1>External</h1></li>
           <li><a href="https://www.fflogs.com/guild/id/95907" target="_blank"><div className="fflogs">FF Logs Guild</div></a></li>
           <li><a href="https://discord.gg/7N39K3nRt3" target="_blank"><div className="discord">Discord</div></a></li>
