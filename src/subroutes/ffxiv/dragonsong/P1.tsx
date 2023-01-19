@@ -1,7 +1,14 @@
 import IconGrid from "../components/IconGrid";
 import { eIcon } from "../components/Icon";
+import TableOfContents from "../components/TableOfContents";
+import { useEffect, useState } from "react";
 
 function P1() {
+  const [sections, setSections] = useState([]);
+  useEffect(() => {
+    setSections(Array.from(document.querySelectorAll(".dragonsong-guide > h2")));
+  }, []);
+
   return (
     <>
       <div className="section dragonsong-guide">
@@ -26,13 +33,15 @@ function P1() {
 
         ]} />
 
-        <h2 id="toolbox">Toolbox</h2>
+        <h2 id="toolboxes">Toolboxes</h2>
         <ul className="toolboxes">
           <li>
             <button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=802461081524561&preview=1", "_blank")}>Entire Phase</button>
           </li>
         </ul>
       </div>
+      
+      <TableOfContents sections={sections} />
     </>
   )
 }

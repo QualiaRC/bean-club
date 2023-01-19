@@ -1,8 +1,8 @@
 import Timeline_P7S from "./res/timeline_p7s.json";
-import YouTube from "./components/Youtube";
-import TableOfContents from "./components/TableOfContents";
+import YouTube from "../components/Youtube";
+import TableOfContents from "../components/TableOfContents";
 import { useEffect, useState } from "react";
-import Timeline from "./components/Timeline";
+import Timeline from "../components/Timeline";
 
 const Videos = [
   "https://www.youtube.com/embed/ALsYpDwW8DU",

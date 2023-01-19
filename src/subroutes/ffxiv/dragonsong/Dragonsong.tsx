@@ -10,6 +10,8 @@ import ImgP6 from "./res/img/p6.png";
 import ImgP7 from "./res/img/p7.png";
 
 import P1 from "./P1";
+import P2 from "./P2";
+import P3 from "./P3";
 
 function Dragonsong() {
   return (
@@ -17,8 +19,8 @@ function Dragonsong() {
       <Route path="/" element={<Layout />}>
         <Route path="" element={<Home />} />
         <Route path="/p1" element={ <P1 /> } />
-        <Route path="/p2" element={ null } />
-        <Route path="/p3" element={ null } />
+        <Route path="/p2" element={ <P2 /> } />
+        <Route path="/p3" element={ <P3 /> } />
         <Route path="/p4" element={ null } />
         <Route path="/p5" element={ null } />
         <Route path="/p6" element={ null } />

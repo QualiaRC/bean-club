@@ -1,7 +1,7 @@
-import YouTube from "./components/Youtube";
-import TableOfContents from "./components/TableOfContents";
-import IconGrid from "../components/IconGrid"
-import { eIcon } from "../components/Icon"
+import YouTube from "../components/Youtube";
+import TableOfContents from "../components/TableOfContents";
+import IconGrid from "../components/IconGrid";
+import { eIcon } from "../components/Icon";
 import { useEffect, useState } from "react";
 
 const Videos = [

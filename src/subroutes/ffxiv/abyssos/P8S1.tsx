@@ -1,5 +1,5 @@
-import YouTube from "./components/Youtube";
-import TableOfContents from "./components/TableOfContents";
+import YouTube from "../components/Youtube";
+import TableOfContents from "../components/TableOfContents";
 import { useEffect, useState } from "react";
 
 const Videos = [
