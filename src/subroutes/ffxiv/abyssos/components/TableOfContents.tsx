@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 function TableOfContents(props: any) {
   const [bolded, setBolded] = useState(null);
+  const [isMobile, setMobile] = useState(false);
+  const [showMobileToc, setMobileToc] = useState(false);
 
   const scrollTo = (id: string) => {
     const dims = document.querySelector(`#${id}`)?.getBoundingClientRect();
@@ -26,18 +28,40 @@ function TableOfContents(props: any) {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
+  const handleResize = () => {
+    setMobile(window.innerWidth < 800);
+  }
+  useEffect(() => {
+    window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  const toggleMobileToc = () => {
+    setMobileToc(!showMobileToc);
+  }
+
   return (
-    <div className="table-of-contents section">
-      <h1>Table of Contents</h1>
-      <ul>
-        {
-          props.sections.map((element: HTMLElement) => {
-            return <li data-current={bolded === element} key={element.id} onClick={() => scrollTo(element.id)}>{element.innerText}</li>
-          })
-        }
-      </ul>
-      <div className="top" title="Return to top of page" onClick={() => window.scrollTo(window.scrollX, 0)}>^</div>
-    </div>
+    <>
+      {isMobile ? <div className="mobile-toc-toggle" onClick={toggleMobileToc}></div> : <></>}
+      {!isMobile || showMobileToc ?
+        <>
+          { showMobileToc ? <div className="close-region" onClick={toggleMobileToc}></div> : null }
+          <div className={`table-of-contents section ${isMobile ? "toc-mobile" : ""}`}>
+            <h1>Table of Contents</h1>
+            <ul>
+              {
+                props.sections.map((element: HTMLElement) => {
+                  return <li data-current={bolded === element} key={element.id} onClick={() => scrollTo(element.id)}>{element.innerText}</li>
+                })
+              }
+            </ul>
+            <div className="top" title="Return to top of page" onClick={() => window.scrollTo(window.scrollX, 0)}>^</div>
+          </div>
+        </> :
+        null}
+    </>
   )
 }
 
