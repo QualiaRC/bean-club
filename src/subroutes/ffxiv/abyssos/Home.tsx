@@ -1,6 +1,6 @@
 import { useState } from "react";
 import IconGrid from "../components/IconGrid"
-import { Job } from "../components/JobIcon"
+import { eIcon } from "../components/Icon"
 
 function Home() {
   const [valid, setValid] = useState(false);
@@ -30,24 +30,24 @@ function Home() {
       <h2>General-Purpose Positions</h2>
       Clock Positions<br/><br/>
       <IconGrid grid={[
-        ['', '', Job.WAR, '', ''],
-        ['', Job.RDM, '', Job.MCH, ''],
-        [Job.SCH, '', '', '', Job.WHM],
-        ['', Job.SAM, '', Job.NIN, ''],
-        ['', '', Job.PLD, '', ''],
+        ['', '', eIcon.WAR, '', ''],
+        ['', eIcon.RDM, '', eIcon.MCH, ''],
+        [eIcon.SCH, '', '', '', eIcon.WHM],
+        ['', eIcon.SAM, '', eIcon.NIN, ''],
+        ['', '', eIcon.PLD, '', ''],
       ]} />
       <br/><br/>
       Vertical Spreads<br/><br/>
       <IconGrid grid={[
-        [Job.WAR, '', Job.PLD],
-        [Job.RDM, '', Job.MCH],
-        [Job.SCH, '', Job.WHM],
-        [Job.SAM, '', Job.NIN]
+        [eIcon.WAR, '', eIcon.PLD],
+        [eIcon.RDM, '', eIcon.MCH],
+        [eIcon.SCH, '', eIcon.WHM],
+        [eIcon.SAM, '', eIcon.NIN]
       ]} />
       <br/><br/>
       Horizontal Spreads<br/><br/>
       <IconGrid grid={[
-        [Job.RDM, Job.SCH, Job.SAM, Job.WAR, '', Job.PLD, Job.NIN, Job.WHM, Job.MCH]
+        [eIcon.RDM, eIcon.SCH, eIcon.SAM, eIcon.WAR, '', eIcon.PLD, eIcon.NIN, eIcon.WHM, eIcon.MCH]
       ]} />
     </div>
   )

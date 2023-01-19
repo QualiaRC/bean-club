@@ -9,12 +9,14 @@ import ImgP5 from "./res/img/p5.png";
 import ImgP6 from "./res/img/p6.png";
 import ImgP7 from "./res/img/p7.png";
 
+import P1 from "./P1";
+
 function Dragonsong() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="" element={<Home />} />
-        <Route path="/p1" element={ null } />
+        <Route path="/p1" element={ <P1 /> } />
         <Route path="/p2" element={ null } />
         <Route path="/p3" element={ null } />
         <Route path="/p4" element={ null } />

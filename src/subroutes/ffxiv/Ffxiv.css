@@ -396,7 +396,7 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
   min-width: 800px;
 }
 
-.encounter-home, .abyssos-guide {
+.encounter-home, .abyssos-guide, .dragonsong-guide {
   font-size: 1.5rem;
   flex: 1;
 }
@@ -577,10 +577,10 @@ ul.hyperlink-list, ul.videos, ul.diagrams, ul.toolboxes {
     margin: 1.5em auto;
     min-width: unset;
   }
-  .encounter-home, .abyssos-guide {
+  .encounter-home, .abyssos-guide, .dragonsong-guide {
     font-size: 1rem;
   }
-  .abyssos-guide ul {
+  .abyssos-guide ul, .dragonsong-guide ul {
     padding-left: 1em;
   }
   .timeline-container {

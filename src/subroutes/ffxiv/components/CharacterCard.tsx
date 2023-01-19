@@ -1,4 +1,4 @@
-import JobIcon from "./JobIcon";
+import JobIcon from "./Icon";
 
 function CharacterCard(props: any) {
   return (

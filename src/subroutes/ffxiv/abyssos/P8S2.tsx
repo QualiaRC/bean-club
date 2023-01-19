@@ -1,7 +1,7 @@
 import YouTube from "./components/Youtube";
 import TableOfContents from "./components/TableOfContents";
 import IconGrid from "../components/IconGrid"
-import { Job } from "../components/JobIcon"
+import { eIcon } from "../components/Icon"
 import { useEffect, useState } from "react";
 
 const Videos = [
@@ -44,21 +44,21 @@ function P8S2() {
         <br/>
         Horizontal Spreads for Natural Alignment<br/>
         <IconGrid grid={[
-          [Job.SAM, Job.PLD, Job.WAR, Job.NIN],
-          [Job.RDM, Job.SCH, Job.WHM, Job.MCH]
+          [eIcon.SAM, eIcon.PLD, eIcon.WAR, eIcon.NIN],
+          [eIcon.RDM, eIcon.SCH, eIcon.WHM, eIcon.MCH]
         ]} />
 
         <br/><br/>
         Melee Flexers for NA Fire/Ice
         <IconGrid grid={[
-          [Job.PLD, Job.SAM]
+          [eIcon.PLD, eIcon.SAM]
         ]} />
 
         <br/><br/>
         Horizontal Spreads for Limitless Desolation and Dominion
         <IconGrid grid={[
-          [Job.WAR, Job.WHM, Job.SAM, Job.NIN],
-          [Job.PLD, Job.SCH, Job.RDM, Job.MCH]
+          [eIcon.WAR, eIcon.WHM, eIcon.SAM, eIcon.NIN],
+          [eIcon.PLD, eIcon.SCH, eIcon.RDM, eIcon.MCH]
         ]} />
         <i>Dominion tower priority from left to right is THMR</i><br/>
 

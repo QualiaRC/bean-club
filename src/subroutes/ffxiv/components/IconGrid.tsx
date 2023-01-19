@@ -1,4 +1,4 @@
-import JobIcon from "./JobIcon"
+import JobIcon from "./Icon"
 
 function IconGrid(props: any) {
   let i = 0;
