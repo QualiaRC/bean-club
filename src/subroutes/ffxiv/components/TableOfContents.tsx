@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function TableOfContents(props: any) {
   const [bolded, setBolded] = useState(null);
-  const [isMobile, setMobile] = useState(false);
+  const [isMobile, setMobile] = useState(window.innerWidth < 800);
   const [showMobileToc, setMobileToc] = useState(false);
 
   const scrollTo = (id: string) => {
