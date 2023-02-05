@@ -3,12 +3,14 @@ import Home from "./Home";
 import Banner from "./res/img/bg-omega.png";
 import ImgP1 from "./res/img/p1.png";
 
+import P1 from "./P1";
+
 function Omega() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="" element={<Home />} />
-        <Route path="/p1" element={ null } />
+        <Route path="/p1" element={ <P1 /> } />
         <Route path="*" element={<Navigate to="/ffxiv/omega" replace />} />
       </Route>
     </Routes>
