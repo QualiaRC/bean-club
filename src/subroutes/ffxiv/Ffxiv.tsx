@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { Routes, Route, Link, Outlet, Navigate, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Abyssos from "./abyssos/Abyssos";
+import Anabaseios from "./anabaseios/Anabaseios";
 import Dragonsong from "./dragonsong/Dragonsong";
 import Omega from "./omega/Omega";
+import Gear from "./gear/Gear";
 import Slider from "./components/Slider";
-import Snow from "./components/Snow";
 
 function Ffxiv() {
   return (
@@ -14,8 +15,10 @@ function Ffxiv() {
       <Route path="/" element={<Wrapper />}>
         <Route path="" element={<Home />} />
         <Route path="/abyssos/*" element={<Abyssos />} />
+        <Route path="/anabaseios/*" element={<Anabaseios />} />
         <Route path="/dragonsong/*" element={<Dragonsong />} />
         <Route path="/omega/*" element={<Omega />} />
+        <Route path="/gear/*" element={<Gear />} />
         <Route path="*" element={<Navigate to="/ffxiv" replace />} />
       </Route>
     </Routes>
@@ -30,7 +33,6 @@ function Wrapper() {
   }, [location]);
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [snowEnabled, setSnowEnabled] = useState(true);
 
   const toggleState = (state:boolean) => {
     setMenuOpen(state);
@@ -54,15 +56,15 @@ function Wrapper() {
       <nav className="navbar">
         <Link to="/ffxiv"><div className="logo-button" /></Link>
         <div className={menuOpen ? "icon-close" : "icon-menu"} onClick={() => { toggleState(!menuOpen) }} />
-        <Slider label="❄️" toggled={(e: boolean) => {setSnowEnabled(e)}} />
       </nav>
 
       { menuOpen ? <div className="close-region" onClick={() => { toggleState(false) }} /> : null }
-      <Snow enabled={snowEnabled}/>
+
       <nav className="drawer" data-open={menuOpen ? "" : undefined}>
         <ul>
           <li><h1>Encounters</h1></li>
           <li><Link to="./abyssos"><div>Abyssos (Savage)</div></Link></li>
+          <li><Link to="./anabaseios"><div>Anabaseios (Savage)</div></Link></li>
           <li><Link to="./dragonsong"><div>Dragonsong's Reprise (Ultimate)</div></Link></li>
           <li><Link to="./omega"><div>The Omega Protocol (Ultimate)</div></Link></li>
           
