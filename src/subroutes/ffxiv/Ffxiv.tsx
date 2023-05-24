@@ -6,7 +6,6 @@ import Abyssos from "./abyssos/Abyssos";
 import Anabaseios from "./anabaseios/Anabaseios";
 import Dragonsong from "./dragonsong/Dragonsong";
 import Omega from "./omega/Omega";
-import Gear from "./gear/Gear";
 import Slider from "./components/Slider";
 
 function Ffxiv() {
@@ -18,7 +17,6 @@ function Ffxiv() {
         <Route path="/anabaseios/*" element={<Anabaseios />} />
         <Route path="/dragonsong/*" element={<Dragonsong />} />
         <Route path="/omega/*" element={<Omega />} />
-        <Route path="/gear/*" element={<Gear />} />
         <Route path="*" element={<Navigate to="/ffxiv" replace />} />
       </Route>
     </Routes>
