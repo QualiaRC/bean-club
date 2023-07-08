@@ -1,7 +1,7 @@
 import Banner1 from "../../res/img/group-p4s.png";
-import Banner2 from "../../res/img/group-map.png";
-import Banner3 from "../../res/img/group-p6s.png";
 import Banner4 from "../../res/img/group-p8s.png";
+import Banner3 from "../../res/img/group-p12s.png";
+import Banner2 from "../../res/img/group-map.png";
 
 import CharacterCard from "./components/CharacterCard";
 import { eIcon } from "./components/Icon";
