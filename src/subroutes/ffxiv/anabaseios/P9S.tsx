@@ -1,6 +1,4 @@
 
-import YouTube from "../components/Youtube";
-import Timeline from "../components/Timeline";
 import { useEffect, useState } from "react";
 import TableOfContents from "../components/TableOfContents";
 
@@ -21,27 +19,20 @@ function P9S() {
 
         <h2 id="party-organization">Party Organization</h2>
         <ul>
-          <li></li>
-        </ul>
-        <h2 id="timeline">Timeline</h2>
-        {/* <Timeline timelineData={null} /> */}
-
-        <h2 id="video-guides">Video Guides</h2>
-        <ul className="videos">
-          {
-            Videos.map((url: string) => {
-              return <li key={url}><YouTube src={url}></YouTube></li>
-            })
-          }
+          <li>Role-partners (DPS and Support) for Fire/Ice and KB stacks<br />Use clock spots, supports rotate into DPS with the same marker colors.</li>
+          <li>2 light parties for healer stacks</li>
         </ul>
 
-        <h2 id="diagrams">Diagrams</h2>
-        <ul className="diagrams">
-          {
-            Diagrams.map((url: string) => {
-              return <li key={url}><img src={url} alt="" /></li>
-            })
-          }
+
+        <h2 id="toolboxes">Toolboxes (Outdated)</h2>
+        <ul className="toolboxes">
+          <li><button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=883781327545861&preview=1", "_blank")}>Beginning to Limit Cut  1</button></li>
+          <li><button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=491781443145861&preview=1", "_blank")}>Limit Cut 1 to Meteors</button></li>
+          <br />
+          <li><button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=081781415935861&preview=1", "_blank")}>First Dual Spells</button></li>
+          <br />
+          <li><button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=154787554645861&preview=1", "_blank")}>Limit Cut 1</button></li>
+          <li><button onClick={() => window.open("https://ff14.toolboxgaming.space/?id=441884512555861&preview=1", "_blank")}>Limit Cut 2</button></li>
         </ul>
       </div>
 
