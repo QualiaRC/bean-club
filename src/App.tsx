@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import Ffxiv from "./subroutes/ffxiv/Ffxiv";
 import Certified from "./subroutes/certified/Certified";
+import Rats from "./subroutes/rats/Rats";
 import Logo from "./res/img/ff14bean.png";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         </Route>
         <Route path="/ffxiv/*" element={<Ffxiv />} />
         <Route path="/certified/*" element={<Certified />} />
+        <Route path="/rats/*" element={<Rats />} />
       </Routes>
     </Router>
   );
