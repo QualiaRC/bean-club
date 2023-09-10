@@ -25,7 +25,7 @@ function Rats() {
       {[...Array(2 ** numRats).keys()].map((_, i) => {
           return (
             <div className="rat-element-container" key={`rat-${i}`} style={{flexBasis: `${ratSize[numRats]}%`, height: `${ratSize[numRats]}%`}}>
-              <div className="rat-label" style={{fontSize: `calc(3em * ${ratSize[numRats] / 100})`}}>
+              <div className="rat-label" style={{fontSize: `${dimensions / 30 * ratSize[numRats] / 100}px`}}>
                 {`${numbers[numRats]} rat${numRats === 0 ? '' : 's'}`}
               </div>
               <div className="rat-element" style={{backgroundImage: `url(${ImgRat})`}}></div>
