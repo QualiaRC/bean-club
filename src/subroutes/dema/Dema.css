@@ -1,0 +1,48 @@
+#dema-canvas {
+  border: 1px solid #ccc;
+}
+
+.dema-parameters {
+  background: #0005;
+  padding: 1em;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.dema-parameters textarea {
+  font-size: 1.5rem;
+}
+
+.dema-input {
+  border: 1px solid black;
+  width: 300px;
+}
+
+.dema-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 512px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 1em;
+}
+
+.dema-slider-container {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.dema-button {
+  font-size: 1.5rem;
+  margin: 0 1em;
+  padding: 0.2em 1em;
+  cursor: pointer;
+}
