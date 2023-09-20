@@ -10,15 +10,18 @@ function Rats() {
   const [dimensions, setDimensions] = useState(Math.min(window.innerHeight, window.innerWidth));
 
   useEffect(() => {
+    document.body.style.backgroundColor = "#1e1e1e";
+    document.body.style.color = "#ccc";
+
     function handleResize() {
       setDimensions(Math.min(window.innerHeight, window.innerWidth));
     }
 
     window.addEventListener('resize', handleResize);
 
+
     return () => { window.removeEventListener('resize', handleResize) }
   });
-
 
   return (
     <div style={{margin: 'auto', width: 'fit-content'}}>

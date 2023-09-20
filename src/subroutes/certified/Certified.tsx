@@ -54,12 +54,12 @@ function Certified() {
   }
 
   return (
-    <div className="d">
+    <div className="certified-container">
       <canvas id="c" width="512" height="512" onContextMenu={contextMenu} /><br />
-      <input type="text" value={text} onInput={inputUpdate} /><br />
+      <input className="certified-input" type="text" value={text} onInput={inputUpdate} /><br />
       <div>
-        <a className="b" onClick={save}>Save</a>
-        <a className="b" onClick={copy}>Copy</a>
+        <button className="certified-button" onClick={save}>Save</button>
+        <button className="certified-button" onClick={copy}>Copy</button>
       </div>
     </div>
   );
