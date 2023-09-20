@@ -66,21 +66,29 @@ function Dema() {
     }
 
     const save = (e: any) => {
-        e.target.download = `certified_${text}_moment.png`;
-        e.target.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        const download = document.createElement("a");
+        download.download = `dema.png`;
+        download.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        download.click();
+        download.remove();
     }
 
     let to: NodeJS.Timeout;
     const copy = (e: any) => {
         if (to) clearTimeout(to);
         canvas.toBlob((blob: any) => { navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]) });
-        e.target.text = "Copied!";
-        to = setTimeout(() => e.target.text = "Copy", 1000);
+        e.target.innerText = "Copied!";
+        to = setTimeout(() => e.target.innerText = "Copy", 1000);
     }
 
     return (
         <div className="dema-container">
-            <canvas id="dema-canvas" width="300" height="300" onContextMenu={(e: any) => { e.preventDefault() }} />
+            <canvas id="dema-canvas" width="300" height="300" onContextMenu={(e: any) => { e.preventDefault() }} style={{background:`url(${template})`}} />
+
+            <div>
+                <button className="dema-button" onClick={save}>Save</button>
+                <button className="dema-button" onClick={copy}>Copy</button>
+            </div>
 
             <div className="dema-parameters">
                 <div>
@@ -105,13 +113,8 @@ function Dema() {
 
                 <div>
                     Line height:<br />
-                    <input className="dema-input" type="range" min="0.2" max="5" step="0.1" value={lineHeight} onChange={(e: any) => { updateLineHeight(e.target.value) }} />
+                    <input className="dema-input" type="range" min="0.2" max="5" step="0.05" value={lineHeight} onChange={(e: any) => { updateLineHeight(e.target.value) }} />
                 </div>
-            </div>
-
-            <div>
-                <button className="dema-button" onClick={save}>Save</button>
-                <button className="dema-button" onClick={copy}>Copy</button>
             </div>
         </div>
     )
