@@ -7,6 +7,7 @@ import "cropperjs/dist/cropper.css";
 
 function Dema() {
     const [mode, setMode] = useState("text");
+    const [expandedParameters, setExpandedParameters] = useState(false);
     const [highContrastText, setHighContrastText] = useState(false);
     const [text, setText] = useState("I really\nlove beans!");
     const [fontSize, setFontSize] = useState(36);
@@ -57,7 +58,7 @@ function Dema() {
             const lines = text.split('\n');
             let y = textPosition[1] - (lines.length - 1) * (fontSize * lineHeight / 2);
             for (const line of lines) {
-                if(highContrastText) ctx.strokeText(line, textPosition[0], y);
+                if (highContrastText) ctx.strokeText(line, textPosition[0], y);
 
                 ctx.fillText(line, textPosition[0], y);
                 y += fontSize * lineHeight;
@@ -135,30 +136,37 @@ function Dema() {
                                     <textarea className="dema-input" value={text} onInput={(e: any) => { setText(e.target.value) }} />
                                 </div>
 
-                                <div>
-                                    Font Size:
-                                    <input className="dema-input" type="range" min="4" max="128" value={fontSize} onInput={(e: any) => { setFontSize(e.target.value) }} />
-                                </div>
-
-                                <div>
-                                    Text position:
-                                    <div className="dema-slider-container">
-                                        <span>X</span><input type="range" min="0" max="300" value={textPosition[0]} className="dema-input" onChange={(e: any) => { setTextPosition([e.target.value, textPosition[1]]) }} />
+                                <div className="dema-expanded-parameters" data-active={expandedParameters}>
+                                    <div>
+                                        Font Size:
+                                        <input className="dema-input" type="range" min="4" max="128" value={fontSize} onInput={(e: any) => { setFontSize(e.target.value) }} />
                                     </div>
-                                    <div className="dema-slider-container">
-                                        <span>Y</span><input type="range" min="0" max="300" value={textPosition[1]} className="dema-input" onChange={(e: any) => { setTextPosition([textPosition[0], e.target.value]) }} />
+
+                                    <div>
+                                        Text position:
+                                        <div className="dema-slider-container">
+                                            <span>X</span><input type="range" min="0" max="300" value={textPosition[0]} className="dema-input" onChange={(e: any) => { setTextPosition([e.target.value, textPosition[1]]) }} />
+                                        </div>
+                                        <div className="dema-slider-container">
+                                            <span>Y</span><input type="range" min="0" max="300" value={textPosition[1]} className="dema-input" onChange={(e: any) => { setTextPosition([textPosition[0], e.target.value]) }} />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        Line height:
+                                        <input className="dema-input" type="range" min="0.2" max="5" step="0.05" value={lineHeight} onChange={(e: any) => { setLineHeight(e.target.value) }} />
+                                    </div>
+
+                                    <div className="dema-checkbox">
+                                        <input type="checkbox" checked={highContrastText} onChange={() => { setHighContrastText(!highContrastText) }} />
+                                        High contrast text
                                     </div>
                                 </div>
 
-                                <div>
-                                    Line height:
-                                    <input className="dema-input" type="range" min="0.2" max="5" step="0.05" value={lineHeight} onChange={(e: any) => { setLineHeight(e.target.value) }} />
+                                <div className="dema-expand-parameters" data-active={expandedParameters} onClick={() => { setExpandedParameters(!expandedParameters) }}>
+                                    <div>{expandedParameters ? "Less" : "More"}</div>
                                 </div>
 
-                                <div className="dema-checkbox">
-                                    <input type="checkbox" checked={highContrastText} onChange={() => {setHighContrastText(!highContrastText)}}/>
-                                    High contrast text
-                                </div>
                             </> : <></>
                     }
                     {
