@@ -2,23 +2,72 @@
   border: 1px solid #ccc;
 }
 
-.dema-parameters {
-  background: #0005;
-  padding: 1em;
+.dema-setting-change, .dema-parameters {
+  width: 100%;
   border-radius: 0.5em;
   display: flex;
+}
+
+.dema-parameters {
+  background: #141414;
+  padding: 1em;
   flex-direction: column;
   gap: 1em;
 }
 
+.dema-setting-change {
+  flex-direction: row;
+  gap: 1em;
+  width: calc(100% + 2em);
+}
+
+.dema-setting-change > button {
+  background: #141414;
+  color: #ccc;
+  border: 0;
+  font-size: 1em;
+  flex: 1;
+  padding: 0.6em 0;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.5em;
+}
+
+.dema-setting-change > button[data-active="true"] {
+  font-weight: bold;
+}
+
+.dema-setting-change > button:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.5em;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+  transform: scaleY(0);
+  border-radius: 0 0 0.5em 0.5em;
+  transition: 0.1s linear;
+  transform-origin: bottom;
+  clip-path: polygon(0 calc(100% - 0.2em), 100% calc(100% - 0.2em), 100% 100%, 0% 100%);
+}
+
+.dema-setting-change > button[data-active="true"]:before {
+  transform: scaleY(1);
+}
+
+
 .dema-parameters textarea {
   font-size: 1.5rem;
+  height: 3.5em;
   resize: none;
+  border-radius: 0.5rem;
 }
 
 .dema-input {
   border: 1px solid black;
-  width: 300px;
+  width: 100%;
+  margin: 0;
 }
 
 .dema-container {
@@ -27,7 +76,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.5em;
-  gap: 1em;
+  gap: 0.7em;
   margin: 5vh auto;
 }
 
@@ -36,6 +85,7 @@
   display: flex;
   flex-direction: row;
   gap: 0.5em;
+  align-items: center;
 }
 
 .dema-button {
@@ -43,6 +93,40 @@
   margin: 0 0.5em;
   padding: 0.2em 1em;
   cursor: pointer;
+}
+
+.dema-crop-buttons {
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.dema-crop-buttons > button {
+  flex: 1;
+}
+
+#dema-upload-modal {
+  left: 0;
+  top: 0;
+  background: #0005;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+#dema-upload-modal[hidden] {
+  display: none;
+}
+
+#cropper {
+  display: block;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 800px) {
