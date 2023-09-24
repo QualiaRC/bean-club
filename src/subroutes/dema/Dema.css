@@ -61,8 +61,8 @@
 .dema-expand-parameters > div:after {
   content: '';
   position: absolute;
-  right: 0.5em;
-  top: 0.25em;
+  right: 0.45em;
+  top: 0.35em;
   border: 0.7em solid #0000;
   border-left-width: 0.4em;
   border-right-width: 0.4em;

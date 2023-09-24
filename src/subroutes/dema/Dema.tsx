@@ -1,6 +1,6 @@
 import "./Dema.css";
 import templateTransparent from "./demasign.png";
-import template from "./demasignwhite.png";
+import templateWhite from "./demasignwhite.png";
 import { useEffect, useState, useRef } from "react";
 import Cropper, { ReactCropperElement } from "react-cropper";
 import "cropperjs/dist/cropper.css";
@@ -19,6 +19,10 @@ function Dema() {
     const cropperRef = useRef<ReactCropperElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
+    const [demaTransparent, demaWhite] = [new Image(), new Image()];
+    demaTransparent.src = templateTransparent;
+    demaWhite.src = templateWhite;
+
     useEffect(() => {
         document.body.style.backgroundColor = "#1e1e1e";
         document.body.style.color = "#ccc";
@@ -35,36 +39,34 @@ function Dema() {
         ctx.strokeStyle = "black";
         ctx.lineWidth = 2;
 
-        const img = new Image();
-        img.src = croppedBackground.src ? templateTransparent : template;
+        ctx.clearRect(0, 0, 300, 300);
 
-        img.onload = () => {
-            ctx.clearRect(0, 0, 300, 300);
-
-            // Draw whatever background exists
-            if (croppedBackground.src) {
-                ctx.save();
-                ctx.rotate(Math.PI * 0.058);
-                ctx.drawImage(croppedBackground, 50, 140, 245, 135);
-                ctx.restore();
-            }
-
-            // Draw the Dema
-            ctx.drawImage(img, 0, 0);
-
-            // Draw the text
+        // Draw whatever background exists
+        //  but draw a base Dema first
+        if (croppedBackground.src) {
+            ctx.drawImage(demaWhite, 0, 0);
+            
             ctx.save();
-            ctx.rotate(Math.PI * 0.058);
-            const lines = text.split('\n');
-            let y = textPosition[1] - (lines.length - 1) * (fontSize * lineHeight / 2);
-            for (const line of lines) {
-                if (highContrastText) ctx.strokeText(line, textPosition[0], y);
-
-                ctx.fillText(line, textPosition[0], y);
-                y += fontSize * lineHeight;
-            }
+            ctx.rotate(Math.PI * 0.059);
+            ctx.drawImage(croppedBackground, 53, 140, 243, 136);
             ctx.restore();
         }
+
+        // Draw the Dema
+        ctx.drawImage(croppedBackground.src ? demaTransparent : demaWhite, 0, 0);
+
+        // Draw the text
+        ctx.save();
+        ctx.rotate(Math.PI * 0.059);
+        const lines = text.split('\n');
+        let y = textPosition[1] - (lines.length - 1) * (fontSize * lineHeight / 2);
+        for (const line of lines) {
+            if (highContrastText) ctx.strokeText(line, textPosition[0], y);
+
+            ctx.fillText(line, textPosition[0], y);
+            y += fontSize * lineHeight;
+        }
+        ctx.restore();
     }
 
     useEffect(updateCanvas, [text, fontSize, textPosition, lineHeight, croppedBackground, highContrastText]);
@@ -96,7 +98,7 @@ function Dema() {
 
             const fr = new FileReader()
             fr.onload = function () {
-                setCropper(<Cropper src={(fr.result || "").toString()} style={{ height: "400px", width: "100%" }} aspectRatio={245 / 135} ref={cropperRef} />);
+                setCropper(<Cropper src={(fr.result || "").toString()} style={{ height: "400px", width: "100%" }} aspectRatio={243 / 136} ref={cropperRef} />);
                 setShowModal(true);
             }
 
@@ -116,7 +118,7 @@ function Dema() {
     return (
         <>
             <div className="dema-container">
-                <canvas id="dema-canvas" width="300" height="300" ref={canvasRef} onContextMenu={(e: any) => { e.preventDefault() }} style={{ background: `url(${croppedBackground.src ? templateTransparent : template})` }} />
+                <canvas id="dema-canvas" width="300" height="300" ref={canvasRef} onContextMenu={(e: any) => { e.preventDefault() }} style={{ background: `url(${templateWhite})` }} />
 
                 <div>
                     <button className="dema-button" onClick={save}>Save</button>
