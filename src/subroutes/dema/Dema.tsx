@@ -7,6 +7,7 @@ import "cropperjs/dist/cropper.css";
 
 function Dema() {
     const [mode, setMode] = useState("text");
+    const [highContrastText, setHighContrastText] = useState(false);
     const [text, setText] = useState("I really\nlove beans!");
     const [fontSize, setFontSize] = useState(36);
     const [textPosition, setTextPosition] = useState([175, 220]);
@@ -29,7 +30,9 @@ function Dema() {
         if (!ctx) return;
         ctx.font = `bold ${fontSize}px Arial`;
         ctx.textAlign = "center";
-        ctx.fillStyle = "black";
+        ctx.fillStyle = highContrastText ? "white" : "black";
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
 
         const img = new Image();
         img.src = croppedBackground.src ? templateTransparent : template;
@@ -54,6 +57,8 @@ function Dema() {
             const lines = text.split('\n');
             let y = textPosition[1] - (lines.length - 1) * (fontSize * lineHeight / 2);
             for (const line of lines) {
+                if(highContrastText) ctx.strokeText(line, textPosition[0], y);
+
                 ctx.fillText(line, textPosition[0], y);
                 y += fontSize * lineHeight;
             }
@@ -61,7 +66,7 @@ function Dema() {
         }
     }
 
-    useEffect(updateCanvas, [text, fontSize, textPosition, lineHeight, croppedBackground]);
+    useEffect(updateCanvas, [text, fontSize, textPosition, lineHeight, croppedBackground, highContrastText]);
 
     const save = () => {
         const download = document.createElement("a");
@@ -148,6 +153,11 @@ function Dema() {
                                 <div>
                                     Line height:
                                     <input className="dema-input" type="range" min="0.2" max="5" step="0.05" value={lineHeight} onChange={(e: any) => { setLineHeight(e.target.value) }} />
+                                </div>
+
+                                <div className="dema-checkbox">
+                                    <input type="checkbox" checked={highContrastText} onChange={() => {setHighContrastText(!highContrastText)}}/>
+                                    High contrast text
                                 </div>
                             </> : <></>
                     }
